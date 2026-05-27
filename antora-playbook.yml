@@ -1,6 +1,6 @@
 site:
-  title: FIXME Course Title
-  start_page: REPLACEREPONAME::index.adoc
+  title: Ansible Automation Platform (AAP) 2.7
+  start_page: AAP-2.7::index.adoc
 
 content:
   sources:
