@@ -1,0 +1,31 @@
+= Developer and User Experience
+
+The developer and self-service experiences have been streamlined to empower your engineering teams and provide platform administrators with significant quality-of-life updates.
+
+*Developer Tools:* This release focuses heavily on speeding up content creation and reducing context switching. The Execution Environment (EE) Builder now features automated image creation. Additionally, you now have a single, searchable view of Ansible collections aggregated from multiple sources (like Automation Hub and Automation Content). Furthermore, the VS Code Ansible plugin has added direct support for Google Vertex and RHEL AI models.
+
+== *Why does it matter?*
+
+This drastically simplifies the developer workflow by eliminating manual build configurations and command-line execution for EE images. The unified view speeds up content discovery, and adding Vertex and RHEL AI support means developers can utilize powerful AI coding assistants directly inside their IDE without being locked into a single AI provider.
+
+== *How to use it?*
+
+- Utilize the centralized platform UI to discover reusable content collections and trigger automated EE builds without touching the command line. For detail step to step guide https://interact.redhat.com/share/qIZHKuUp78I4yc8Vu2a9/[Automation Portal - Execution Environment Builder]
+- Connect your VS Code Ansible extension directly to Google Vertex or RHEL AI to start receiving intelligent code suggestions as you write playbooks.
+
+*Self-service Enhancements and Usability* Platform administrators and playbook authors now have powerful new ways to curate the user experience and communicate with end-users.
+
+- *Direct Feedback:* Playbook authors can use *ansible.builtin.debug* messages to send URLs and guidance directly to self-service users, displaying the results right in the self-service portal logs.
+- *Template Filtering:* Job Template sync filtering now supports *excludeLabels*.
+- *Runtime Feature Flags:* You can now enable or disable feature flags directly from the user interface during runtime.
+- *Accessibility:* The unified UI now meets Web Content Accessibility Guidelines (WCAG) 2.2.
+
+== Why does it matter?
+
+These changes allow for dynamic platform management without reinstallations (via runtime flags), the ability to toggle features on or off enables rapid experimentation and Ansible Automation Platform’s self-service automation portal helps to make automation accessible to everyone which give admins a highly efficient way to clean up the self-service portal without maintaining complex inclusion logic. The direct feedback mechanism bridges the communication gap between automation engineers and standard users.
+
+== How to use it?
+
+- *To communicate with users:* Insert *ansible.builtin.debug* tasks into your playbooks with custom messages, URLs, or instructions so the self-service user sees them upon job completion.
+- *To hide templates:* Apply specific AAP Labels to templates and use the *excludeLabels* filter so they automatically disappear from the automation portal.
+- *To toggle features:* Navigate directly to the user interface settings to toggle feature flags on or off while the platform is running—no re-installation required.

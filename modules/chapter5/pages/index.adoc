@@ -1,0 +1,28 @@
+= Certified Content Collection Expansions
+
+*Automation Platform (AAP) 2.7* features massive updates to our supported integration collections:
+
+*HashiCorp Vault (hashicorp.vault)* Users can now deploy, configure, and scale Vault clusters using provided playbooks. Event-Driven Ansible can trigger workflows based on Vault events.
+
+- *Why does it matter?*
+
+It natively enables dynamic credentials, short-lived SSH keys, and secure application integration directly within AAP. It also supports Enterprise Vault features like namespaces and multi-tenant configurations.
+
+- *How to use it?*
+
+Use the provided Ansible playbooks to manage Vault policies and dynamic secrets. You can configure webhooks or polling mechanisms to trigger EDA rulebooks based on Vault events. If you are an existing user, utilize the migration documentation to transition smoothly from *community.hashi_vault* to *hashicorp.vault*.
+
+*Splunk (splunk.enterprise, splunk.es, splunk.itsi)* Added modules to automate Universal Forwarder lifecycle installations, manage Incident Response workflows directly, and integrate ITSI seamlessly with EDA.
+
+- *Why does it matter?* It creates a bridge between your observability tools and action, allowing for closed-loop, self-healing IT automation by automatically triggering remediations when Splunk detects an issue.
+- *How to use it?* Use modules like *splunk_universal_forwarder_linux* or *win_splunk_universal_forwarder* to bootstrap installations. For security events, use the *splunk_response_plan_execution* module to automatically apply response plans, and use *itsi_aggregation_policy* to route ITSI events directly to EDA.
+
+*Microsoft MECM & SCOM* New certified collections bridge Ansible with Microsoft Endpoint Configuration Manager (orchestrating zero-downtime Windows Server patching) and route SCOM alerts into Event-Driven Ansible.
+
+- *Why does it matter?* This brings comprehensive "Day-2" Microsoft infrastructure management into AAP, allowing you to orchestrate complex tasks like zero-downtime patching and automatically remediating Windows Server alerts without custom scripting.
+- *How to use it?* Use the *software_update_deployment* and *install_updates* modules to orchestrate your patch cycles. For SCOM, design event-driven hooks via webhooks or event streams to route incoming SCOM alerts into Event-Driven Ansible.
+
+*Windows Operations (infra.windows_ops)* Introduces pre-built roles to automatically apply and enforce DISA STIG and CIS Benchmark compliance rules for Windows Server 2019-2025 out-of-the-box.
+
+- *Why does it matter?* It provides out-of-the-box federal security compliance and ensures your servers meet strict industry-standard hardening guidelines continuously, eliminating manual intervention for drift remediation.
+- *How to use it?* Apply the pre-built roles to your Windows environments and pair them with standard Ansible Automation Platform schedules or Event-Driven Ansible to automatically correct configuration drift, keeping Windows environments continuously aligned with organizational and federal security mandates without manual intervention.

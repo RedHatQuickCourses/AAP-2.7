@@ -1,7 +1,34 @@
-= Chapter 1
+= Installation, Upgrades, & Platform Resilience
 
-In this section, we cover... FIXME
+Before we can use the new features, we must understand how to deploy and upgrade to AAP 2.7, alongside its resilience improvements.
+
+Installation and Upgrades AAP 2.7 completely *removes* the *RPM installation method*, shifting strictly to containerized and operator-supported installation methods, though Ansible Development Tools will still be accessible via RPM. 
 
 
-- Add or remove section entries in the `antora.yaml` file as needed.
-- Ensure you create or delete the corresponding directory for the chapter accordingly.
+== Why AAP 2.7 is Exclusively Containerized:
+- *Farewell to RPMs*: AAP 2.7 officially removes the legacy RPM installer, eliminating host-OS dependency bottlenecks and package conflicts.
+- *Absolute Isolation*: Containers decouple the automation control plane from the underlying OS, making upgrades and rollbacks entirely predictable.
+- *Enterprise Hardening*: Standardizing on Podman and Red Hat OpenShift ensures zero-downtime scalability and rootless container security.
+- *Environment Consistency*: Guarantees a reliable, maintainable, and portable automation fabric across hybrid cloud environments.
+
+== How to use it?
+
+You must first ensure you are on AAP 2.6, as direct upgrades from 2.4 or 2.5 are not supported. Choose either the containerized, operator, or appliance-based method, ensuring that any migration between methods happens while on the same  Ansible Automation Platform version. Click on https://training-lms.redhat.com/sso/saml/auth/rhlpint?RelayState=deeplinkoffering%3D86053961/[Product Enablement: Fast-Track Ansible Automation Platform Migration] for  internals and for partners https://training-lms.redhat.com/sso/saml/auth/rhopen?RelayState=deeplinkoffering%3D86053966/[Click here]. For hands-on lab practice on how to perform the migration. 
+
+== Enhanced Scalability and Reliability:
+
+Event-Driven Ansible (EDA) rulebook executions in AAP 2.7 introduce robust event persistence mechanisms, ensuring the platform seamlessly scales under heavy automation workloads. Concurrently, automation controller projects leverage instantaneous, automated re-syncing immediately following a Git webhook or repository update, maintaining absolute synchronization between your Infrastructure-as-Code (IaC) and the execution environment.
+
+== Why Does it Matter?
+
+- *Zero Dropped Events*: During network outages, system restarts, or unexpected heavy loads, the EDA rule engine preserves event states. This guarantees that critical enterprise alerts are never lost or dropped in transit.
+
+- *Elimination of Configuration Drift*: Automated project re-syncing removes manual intervention and delay. As soon as a developer pushes a change to Git, the automation controller updates in near real-time, preventing the system from running outdated or mismatched automation playbooks.
+
+== How to use it?
+
+- *Enable Persistence in EDA*: Configure your EDA controller activation to utilize the new persistent storage backends, ensuring event streams are retained across container lifecycles.
+
+- *Configure Git Webhooks*: Link your Git repository (GitHub, GitLab, etc.) to the AAP 2.7 automation controller using webhooks.
+
+- *Automate the Sync*: Once the webhook is active, simply commit and push updates to your rulebooks or playbooks. The automation controller automatically detects the webhook event and triggers an immediate, silent background re-sync—no manual refreshing or complex scheduling required.
