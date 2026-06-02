@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Lab Environment :: Ansible Automation Platform (AAP) 2.7</title>
+    <title>Certified Content Collection Expansions :: Ansible Automation Platform (AAP) 2.7</title>
+    <link rel="prev" href="#section2.adoc">
+    <link rel="next" href="#section1.adoc">
     <meta name="generator" content="Antora 3.1.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
@@ -90,9 +92,9 @@
   </li>
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../chapter5/index.html">Certified Content Collection Expansions</a>
+    <a class="nav-link" href="index.html">Certified Content Collection Expansions</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="#section1.adoc">section1.adoc</a>
@@ -149,7 +151,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Ansible Automation Platform (AAP) 2.7</a></li>
-    <li><a href="index-lab-demo.html">Lab Environment</a></li>
+    <li><a href="index.html">Certified Content Collection Expansions</a></li>
   </ul>
 </nav>
 </div>
@@ -158,80 +160,76 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Lab Environment</h1>
-<div class="sect1">
-<h2 id="_instructions_to_launch_your_lab_on_the_red_hat_demo_platform_rhdp"><a class="anchor" href="#_instructions_to_launch_your_lab_on_the_red_hat_demo_platform_rhdp"></a>Instructions to Launch Your Lab on the Red Hat Demo Platform (RHDP)</h2>
-<div class="sectionbody">
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><strong>Log in</strong> to the <a href="#RHDP-Portal-Links">RHDP portal</a></p>
-</li>
-<li>
-<p><strong>Search</strong> for the catalog entry: <strong>FIXME Lab Catalog Name</strong>.</p>
-</li>
-<li>
-<p><strong>Click</strong> on the catalog entry in the search results.</p>
-</li>
-<li>
-<p>On the catalog page, <strong>click</strong> the <strong>Order</strong> button.</p>
-</li>
-<li>
-<p><strong>Fill out</strong> the required details in the order form.</p>
-</li>
-<li>
-<p><strong>Review the warning</strong> at the bottom of the form and <strong>check the box</strong> labeled:<br>
-<strong>“I confirm that I understand the above warnings.”</strong></p>
-</li>
-<li>
-<p><strong>Click</strong> the <strong>Order</strong> button to place your lab order.</p>
-</li>
-</ol>
+<h1 class="page">Certified Content Collection Expansions</h1>
+<div class="paragraph">
+<p><strong>Automation Platform (AAP) 2.7</strong> features massive updates to our supported integration collections:</p>
 </div>
-<div class="sect2">
-<h3 id="_important_notes"><a class="anchor" href="#_important_notes"></a>Important Notes:</h3>
+<div class="paragraph">
+<p><strong>HashiCorp Vault (hashicorp.vault)</strong> Users can now deploy, configure, and scale Vault clusters using provided playbooks. Event-Driven Ansible can trigger workflows based on Vault events.</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>This lab may take approximately <strong>FIXME minutes</strong> to become ready.</p>
-</li>
-<li>
-<p>You will receive an <strong>email with access details</strong> once your lab environment is ready.</p>
-</li>
-<li>
-<p>You can also <strong>retrieve lab access</strong> directly from the RHDP portal.</p>
+<p><strong>Why does it matter?</strong></p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>It natively enables dynamic credentials, short-lived SSH keys, and secure application integration directly within AAP. It also supports Enterprise Vault features like namespaces and multi-tenant configurations.</p>
 </div>
-<div class="sect2">
-<h3 id="_how_to_access_your_lab_via_the_rhdp_portal"><a class="anchor" href="#_how_to_access_your_lab_via_the_rhdp_portal"></a>How to Access Your Lab via the RHDP Portal:</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>On the RHDP portal, <strong>click</strong> on the <strong>Services</strong> option in the left-hand menu.</p>
-</li>
-<li>
-<p><strong>Select your lab</strong> from the listings on the right-hand side of the page to view access details.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="RHDP-Portal-Links"><a class="anchor" href="#RHDP-Portal-Links"></a>RHDP Portal Links</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>RedHat associates: <a href="https://demo.redhat.com/" target="_blank" rel="noopener">https://demo.redhat.com/</a></p>
-</li>
-<li>
-<p>RedHat partners: <a href="https://partner.demo.redhat.com/" target="_blank" rel="noopener">https://partner.demo.redhat.com/</a></p>
+<p><strong>How to use it?</strong></p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>Use the provided Ansible playbooks to manage Vault policies and dynamic secrets. You can configure webhooks or polling mechanisms to trigger EDA rulebooks based on Vault events. If you are an existing user, utilize the migration documentation to transition smoothly from <strong>community.hashi_vault</strong> to <strong>hashicorp.vault</strong>.</p>
 </div>
+<div class="paragraph">
+<p><strong>Splunk (splunk.enterprise, splunk.es, splunk.itsi)</strong> Added modules to automate Universal Forwarder lifecycle installations, manage Incident Response workflows directly, and integrate ITSI seamlessly with EDA.</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Why does it matter?</strong> It creates a bridge between your observability tools and action, allowing for closed-loop, self-healing IT automation by automatically triggering remediations when Splunk detects an issue.</p>
+</li>
+<li>
+<p><strong>How to use it?</strong> Use modules like <strong>splunk_universal_forwarder_linux</strong> or <strong>win_splunk_universal_forwarder</strong> to bootstrap installations. For security events, use the <strong>splunk_response_plan_execution</strong> module to automatically apply response plans, and use <strong>itsi_aggregation_policy</strong> to route ITSI events directly to EDA.</p>
+</li>
+</ul>
 </div>
+<div class="paragraph">
+<p><strong>Microsoft MECM &amp; SCOM</strong> New certified collections bridge Ansible with Microsoft Endpoint Configuration Manager (orchestrating zero-downtime Windows Server patching) and route SCOM alerts into Event-Driven Ansible.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Why does it matter?</strong> This brings comprehensive "Day-2" Microsoft infrastructure management into AAP, allowing you to orchestrate complex tasks like zero-downtime patching and automatically remediating Windows Server alerts without custom scripting.</p>
+</li>
+<li>
+<p><strong>How to use it?</strong> Use the <strong>software_update_deployment</strong> and <strong>install_updates</strong> modules to orchestrate your patch cycles. For SCOM, design event-driven hooks via webhooks or event streams to route incoming SCOM alerts into Event-Driven Ansible.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Windows Operations (infra.windows_ops)</strong> Introduces pre-built roles to automatically apply and enforce DISA STIG and CIS Benchmark compliance rules for Windows Server 2019-2025 out-of-the-box.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Why does it matter?</strong> It provides out-of-the-box federal security compliance and ensures your servers meet strict industry-standard hardening guidelines continuously, eliminating manual intervention for drift remediation.</p>
+</li>
+<li>
+<p><strong>How to use it?</strong> Apply the pre-built roles to your Windows environments and pair them with standard Ansible Automation Platform schedules or Event-Driven Ansible to automatically correct configuration drift, keeping Windows environments continuously aligned with organizational and federal security mandates without manual intervention.</p>
+</li>
+</ul>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="#section2.adoc">section2.adoc</a></span>
+  <span class="next"><a href="#section1.adoc">section1.adoc</a></span>
+</nav>
 </article>
   </div>
 </main>

@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Chapter 3 :: Ansible Automation Platform (AAP) 2.7</title>
-    <link rel="prev" href="../chapter2/section1.html">
-    <link rel="next" href="section1.html">
+    <title>Security, Governance, and Identity :: Ansible Automation Platform (AAP) 2.7</title>
+    <link rel="prev" href="../chapter2/index.html">
+    <link rel="next" href="../chapter4/index.html">
     <meta name="generator" content="Antora 3.1.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
@@ -43,7 +43,7 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../index.html">Home</a>
+    <a class="nav-link" href="../index.html">Ansible Automation Platform (AAP) 2.7</a>
   </li>
 </ul>
   </li>
@@ -51,23 +51,11 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../chapter1/index.html">Chapter 1</a>
+    <a class="nav-link" href="../chapter1/index.html">Installation, Upgrades, &amp; Platform Resilience</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../chapter1/section1.html">Section 1</a>
   </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter1/section2.html">Section 2</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter1/section3.html">Section 3</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter1/tabs-demo.html">Tabbed code blocks</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter1/collapsible-demo.html">Collapsible blocks</a>
-  </li>
 </ul>
   </li>
 </ul>
@@ -75,29 +63,14 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../chapter2/index.html">Chapter 2</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section1.html">Section 1</a>
-  </li>
-</ul>
+    <a class="nav-link" href="../chapter2/index.html">The AI Revolution (AIOps, RAG, and MCP)</a>
   </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item is-current-page" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="index.html">Chapter 3</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="section1.html">Section 1</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="section2.html">Section 2</a>
-  </li>
-</ul>
+    <a class="nav-link" href="index.html">Security, Governance, and Identity</a>
   </li>
 </ul>
   </li>
@@ -105,7 +78,7 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="#index.adoc">index.adoc</a>
+    <a class="nav-link" href="../chapter4/index.html">Developer and User Experience</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="#section1.adoc">section1.adoc</a>
@@ -121,7 +94,7 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="#index.adoc">index.adoc</a>
+    <a class="nav-link" href="../chapter5/index.html">Certified Content Collection Expansions</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="#section1.adoc">section1.adoc</a>
@@ -137,7 +110,7 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="#index.adoc">index.adoc</a>
+    <a class="nav-link" href="../chapter6/index.html">Automation Coding Assistance and Core Performance Improvements</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="#section1.adoc">section1.adoc</a>
@@ -178,7 +151,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Ansible Automation Platform (AAP) 2.7</a></li>
-    <li><a href="index.html">Chapter 3</a></li>
+    <li><a href="index.html">Security, Governance, and Identity</a></li>
   </ul>
 </nav>
 </div>
@@ -187,23 +160,41 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Chapter 3</h1>
+<h1 class="page">Security, Governance, and Identity</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>In this section, we cover&#8230;&#8203; FIXME</p>
+<p>Ansible Automation Platform (AAP) 2.7 fundamentally rebuilds the platform’s security architecture by enforcing a strict zero-trust posture and eliminating legacy, high-risk access vectors. By transitioning entirely away from direct component-level API access and unencrypted basic authentication, AAP 2.7 mandates a unified gateway model. The platform now introduces native OpenID Connect (OIDC) provider capabilities alongside workload identity frameworks, transforming how users, external applications, and automated playbooks authenticate securely across the enterprise.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_why_does_it_matter"><a class="anchor" href="#_why_does_it_matter"></a>Why Does It Matter?</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>Add or remove section entries in the <code>antora.yaml</code> file as needed.</p>
+<p><strong>Elimination of Static Credential Sprawl:</strong> Traditional automation often relies on hardcoded passwords or long-lived service account tokens that can easily leak. By utilizing dynamic <strong>OIDC Workload Identities [Tech Preview]</strong>, playbooks generate short-lived, cryptographic identities on the fly—greatly reducing the corporate attack surface.</p>
 </li>
 <li>
-<p>Ensure you create or delete the corresponding directory for the chapter accordingly.</p>
+<p><strong>Reduction of the Attack Surface:</strong> Disabling direct, unauthenticated API access to individual components (like the Controller, Hub, or EDA engines) closes legacy backdoors. Attackers can no longer attempt to bypass security layers by hitting standalone component ports directly.</p>
+</li>
+<li>
+<p><strong>Enforced Centralized Auditing:</strong> Forcing all external tools, basic authentication, and personal access tokens through a unified authentication layer means your security team gets a single, untampered audit log of every action taken within the automation fabric.</p>
+</li>
+<li>
+<p><strong>Seamless Secrets Management Integration:</strong> By acting as an OIDC provider, AAP 2.7 allows external systems—specifically HashiCorp Vault—to cryptographically verify that an automated job is exactly who it claims to be before releasing sensitive infrastructure secrets.</p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p><strong>Instructor Tip:</strong> Before running the AAP 2.7 upgrade, execute the new CLI utility aap-detect-direct-component-access. This will automatically scan and pinpoint any legacy, direct-API scripts hidden in your environment so you can fix them before they are blocked.</p>
+</div>
+</div>
+</div>
 <nav class="pagination">
-  <span class="prev"><a href="../chapter2/section1.html">Section 1</a></span>
-  <span class="next"><a href="section1.html">Section 1</a></span>
+  <span class="prev"><a href="../chapter2/index.html">The AI Revolution (AIOps, RAG, and MCP)</a></span>
+  <span class="next"><a href="../chapter4/index.html">Developer and User Experience</a></span>
 </nav>
 </article>
   </div>
