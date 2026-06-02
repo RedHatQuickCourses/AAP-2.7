@@ -2,7 +2,8 @@
 
 In this module, we will explore how AAP 2.7 improves the code-writing experience for developers and the underlying architectural performance of the platform itself.
 
-*Section 1: Automation Coding Assistant* To help engineers write automation code more efficiently, AAP 2.7 introduces core updates to the Automation Coding Assistant.
+*Section 1: Automation Coding Assistant* 
+To help engineers write automation code more efficiently, AAP 2.7 introduces core updates to the Automation Coding Assistant.
 - *RHEL AI Integration:* The coding assistant has added direct support for RHEL AI hosted models.
 - *Removed Dependencies:* With this new support, you are no longer strictly required to use WatsonX to power the coding assistant, giving you more flexibility in your AI model choices.
 
@@ -14,7 +15,8 @@ In this module, we will explore how AAP 2.7 improves the code-writing experience
 - *Red Hat AI:* Powers the *Intelligent assistant* and *Code assistant*.
 - *Automated Inference:* Connected through the MCP server to Observability Platforms.
 
-*Section 2: ansible.platform Performance Improvements* Under the hood, AAP 2.7 is making significant changes to how the platform processes settings and access controls to improve overall execution performance.
+*Section 2: ansible.platform Performance Improvements* 
+Under the hood, AAP 2.7 is making significant changes to how the platform processes settings and access controls to improve overall execution performance.
 
 - *Refactoring for Speed:* Within the *ansible.platform* collection, existing Role-Based Access Control (RBAC) and global settings have been heavily refactored, transitioning them from standard modules to action plugins.
 - *Why does it matter?* These performance improvements are not just about speed today. Most importantly, this refactoring represents the critical foundational work required to start transitioning more "Configuration as Code" capabilities directly into *ansible.platform* in future releases.

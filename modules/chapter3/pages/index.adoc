@@ -1,6 +1,7 @@
 = Security, Governance, and Identity
 
-Ansible Automation Platform (AAP) 2.7 fundamentally rebuilds the platform’s security architecture by enforcing a strict zero-trust posture and eliminating legacy, high-risk access vectors. By transitioning entirely away from direct component-level API access and unencrypted basic authentication, AAP 2.7 mandates a unified gateway model. The platform now introduces native OpenID Connect (OIDC) provider capabilities alongside workload identity frameworks, transforming how users, external applications, and automated playbooks authenticate securely across the enterprise.
+Ansible Automation Platform (AAP) 2.7 fundamentally rebuilds the platform’s security architecture by enforcing a strict zero-trust posture and eliminating legacy, high-risk access vectors. By transitioning entirely away from direct component-level API access and unencrypted basic authentication, AAP 2.7 mandates a unified gateway model. 
+The platform now introduces native OpenID Connect (OIDC) provider capabilities alongside workload identity frameworks, transforming how users, external applications, and automated playbooks authenticate securely across the enterprise.
 
 == Why Does It Matter?
 

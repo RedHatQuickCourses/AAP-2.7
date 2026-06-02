@@ -1,6 +1,7 @@
 = The AI Revolution (AIOps, RAG, and MCP)
 
-Ansible Automation Platform (AAP) 2.7 establishes the critical, industrial-grade connection between artificial intelligence and IT operations by acting as the trusted execution layer for the agentic AI era. By introducing "Bring-Your-Own-Knowledge" (BYOK) Retrieval-Augmented Generation (RAG) pipelines alongside the Model Context Protocol (MCP) server integration, AAP 2.7 transforms experimental AI insights into policy-driven, audited automation workflows. This unified framework injects organization-specific context directly into the Ansible Lightspeed Intelligent Assistant, enabling safe, natural-language orchestration across hybrid cloud environments.
+Ansible Automation Platform (AAP) 2.7 establishes the critical, industrial-grade connection between artificial intelligence and IT operations by acting as the trusted execution layer for the agentic AI era. By introducing "Bring-Your-Own-Knowledge" (BYOK) Retrieval-Augmented Generation (RAG) pipelines alongside the Model Context Protocol (MCP) server integration, AAP 2.7 transforms experimental AI insights into policy-driven, audited automation workflows. 
+This unified framework injects organization-specific context directly into the Ansible Lightspeed Intelligent Assistant, enabling safe, natural-language orchestration across hybrid cloud environments.
 
 == Why It Matters
 - *Context-Aware AI Responses*: Generic LLMs lack internal business context. The BYOK RAG pipeline prioritizes your internal documentation and technical standards over default Ansible imagery, ensuring AI suggestions strictly adhere to your specific enterprise environment and compliance policies.
