@@ -2,6 +2,8 @@
 
 The developer and self-service experiences have been streamlined to empower your engineering teams and provide platform administrators with significant quality-of-life updates.
 
+image::Image 5.png[]
+
 *Developer Tools:* This release focuses heavily on speeding up content creation and reducing context switching. The Execution Environment (EE) Builder now features automated image creation. Additionally, you now have a single, searchable view of Ansible collections aggregated from multiple sources (like Automation Hub and Automation Content). Furthermore, the VS Code Ansible plugin has added direct support for Google Vertex and RHEL AI models.
 
 == *Why does it matter?*

@@ -2,6 +2,8 @@
 
 In this module, we will explore how AAP 2.7 improves the code-writing experience for developers and the underlying architectural performance of the platform itself.
 
+image::Image 2.png[]
+
 *Section 1: Automation Coding Assistant* 
 To help engineers write automation code more efficiently, AAP 2.7 introduces core updates to the Automation Coding Assistant.
 - *RHEL AI Integration:* The coding assistant has added direct support for RHEL AI hosted models.
