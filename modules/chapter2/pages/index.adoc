@@ -3,6 +3,8 @@
 Ansible Automation Platform (AAP) 2.7 establishes the critical, industrial-grade connection between artificial intelligence and IT operations by acting as the trusted execution layer for the agentic AI era. By introducing "Bring-Your-Own-Knowledge" (BYOK) Retrieval-Augmented Generation (RAG) pipelines alongside the Model Context Protocol (MCP) server integration, AAP 2.7 transforms experimental AI insights into policy-driven, audited automation workflows. 
 This unified framework injects organization-specific context directly into the Ansible Lightspeed Intelligent Assistant, enabling safe, natural-language orchestration across hybrid cloud environments.
 
+image::Image 2.png[]
+
 == Why It Matters
 - *Context-Aware AI Responses*: Generic LLMs lack internal business context. The BYOK RAG pipeline prioritizes your internal documentation and technical standards over default Ansible imagery, ensuring AI suggestions strictly adhere to your specific enterprise environment and compliance policies.
 - *Universal, Zero-Custom AI Bridge*: The introduction of the standard Model Context Protocol (MCP) server removes the need for brittle, custom API integrations. It allows third-party AI agents and development tools (like Claude or Cursor) to communicate directly and safely with your automation estate via natural language.
@@ -16,3 +18,5 @@ To put this into practice, we would establish an integrated workflow that contin
 - *Step 1: Build your custom knowledge base.* You can now inject your own internal documentation into the assistant's Retrieval-Augmented Generation (RAG) pipeline.The system can reference a secondary RAG image/repository to answer end-user questions.
 - *Step 2: Turn on the MCP Server.* The MCP integration (entering Tech Preview) enables Large Language Models (LLMs) to interact with and manage AAP through natural language. You can extend Red Hat-maintained content use cases via the MCP plugin and include MCP servers in Execution Environments.
 - *Step 3: Connect the plumbing.* We connect our monitoring tools to the platform. Now, whenever an alert comes in, the AI enriches it with context, waits for our thumbs-up, and fires off the right Ansible playbook to solve the issue.
+
+image::Image 3.png[]
