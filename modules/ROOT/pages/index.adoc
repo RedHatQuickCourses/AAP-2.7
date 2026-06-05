@@ -1,4 +1,4 @@
-= Ansible Automation Platform (AAP) 2.7
+= Key New Features of Ansible Automation Platform 2.7
 
 Welcome to the Key New Features of *Ansible Automation Platform (AAP) 2.7 course!*. In this course, we will explore the major architectural changes, AI advancements and security enhancements being introduced in this release.
 
