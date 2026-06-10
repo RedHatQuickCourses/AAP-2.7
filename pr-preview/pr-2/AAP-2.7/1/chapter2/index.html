@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>The AI Revolution (AIOps, RAG, and MCP) :: Key New Features of Ansible Automation Platform 2.7</title>
+    <link rel="prev" href="../chapter1/index.html">
+    <link rel="next" href="../chapter3/index.html">
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/collapsible.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/reading-time.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.redhat.com" target="_blank"><img src="../../../_/img/redhat-logo.png" height="40px" alt="Red Hat"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">Key New Features of Ansible Automation Platform 2.7</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/RedHatQuickCourses/REPLACEREPONAME/issues" target="_blank">Report Issues</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="AAP-2.7" data-version="1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Key New Features of Ansible Automation Platform 2.7</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Key New Features of Ansible Automation Platform 2.7</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../chapter1/index.html">Installation, Upgrades, &amp; Platform Resilience</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="index.html">The AI Revolution (AIOps, RAG, and MCP)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../chapter3/index.html">Security, Governance, and Identity</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../chapter4/index.html">Developer and User Experience</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../chapter5/index.html">Certified Content Collection Expansions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../chapter6/index.html">Automation Coding Assistance and Core Performance Improvements</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../chapter7/index.html">Event-Driven Ansible Enhancements</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Key New Features of Ansible Automation Platform 2.7</span>
+    <span class="version">1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Key New Features of Ansible Automation Platform 2.7</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Key New Features of Ansible Automation Platform 2.7</a></li>
+    <li><a href="index.html">The AI Revolution (AIOps, RAG, and MCP)</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">The AI Revolution (AIOps, RAG, and MCP)</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ansible Automation Platform (AAP) 2.7 establishes the critical, industrial-grade connection between artificial intelligence and IT operations by acting as the trusted execution layer for the agentic AI era. By introducing "Bring-Your-Own-Knowledge" (BYOK) Retrieval-Augmented Generation (RAG) pipelines alongside the Model Context Protocol (MCP) server integration, AAP 2.7 transforms experimental AI insights into policy-driven, audited automation workflows.
+This unified framework injects organization-specific context directly into the Ansible Lightspeed Intelligent Assistant, enabling safe, natural-language orchestration across hybrid cloud environments.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Image%202.png" alt="Image 2">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_why_it_matters"><a class="anchor" href="#_why_it_matters"></a>Why It Matters</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Context-Aware AI Responses</strong>: Generic LLMs lack internal business context. The BYOK RAG pipeline prioritizes your internal documentation and technical standards over default Ansible imagery, ensuring AI suggestions strictly adhere to your specific enterprise environment and compliance policies.</p>
+</li>
+<li>
+<p><strong>Universal, Zero-Custom AI Bridge</strong>: The introduction of the standard Model Context Protocol (MCP) server removes the need for brittle, custom API integrations. It allows third-party AI agents and development tools (like Claude or Cursor) to communicate directly and safely with your automation estate via natural language.</p>
+</li>
+<li>
+<p><strong>End-to-End AIOps Remediation</strong>: IT environments generate massive telemetry and alert volume. This framework closes the loop by ingesting complex event data, using AI to enrich the context and recommend resolutions, and triggering deterministic Ansible playbooks to remediate issues—all while enforcing strict human-in-the-loop approvals for corporate governance.</p>
+</li>
+<li>
+<p><strong>Dual-Layer Security Guardrails</strong>: As AI moves toward autonomous, agentic action, security is paramount. The MCP server inherits AAP’s existing Role-Based Access Control (RBAC) and can be locked down in a "read-only" mode for safe infrastructure monitoring, or configured for "read-write" mode to securely launch automation jobs without exposing raw secrets.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_someone_actually_uses_this_the_walkthrough"><a class="anchor" href="#_how_someone_actually_uses_this_the_walkthrough"></a>How Someone Actually Uses This (The Walkthrough)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To put this into practice, we would establish an integrated workflow that continuously feeds our environment&#8217;s unique context directly into our automated operations.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Step 1: Build your custom knowledge base with BYOK.</strong> You can now inject your own internal documentation into the assistant&#8217;s Retrieval-Augmented Generation (RAG) pipeline using <strong>"Bring-Your-Own-Knowledge" (BYOK)</strong> [Tech Preview]. The intelligent assistant allows organizations to inject internal policies, best practices, and procedures into the RAG pipeline for more relevant and meaningful model responses. This system can reference a secondary RAG image/repository to answer end-user questions with organization-specific context.</p>
+</li>
+<li>
+<p><strong>Step 2: Turn on the MCP Server.</strong> The <strong>MCP server for Ansible Automation Platform</strong> [Tech Preview] enables Large Language Models (LLMs) and agentic systems to interact with and manage AAP through natural language. You can extend Red Hat-maintained content use cases via the <strong>Ansible MCP server plugin</strong> to integrate AI agents directly into playbooks, and include MCP servers in Execution Environments. The MCP server exposes AAP capabilities as declarative endpoints for secure querying, executing automation jobs, managing credentials, and more.</p>
+</li>
+<li>
+<p><strong>Step 3: Connect AI model providers.</strong> AAP 2.7 supports flexible connectivity with Red Hat AI platforms and bring-your-own-model (BYOM) providers including:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Red Hat AI:</strong> Red Hat AI inference server, RHEL AI, or Red Hat OpenShift AI</p>
+</li>
+<li>
+<p><strong>Supported 3rd-party model providers:</strong> OpenAI and Azure Open AI</p>
+</li>
+<li>
+<p><strong>Coding assistant in Ansible VS Code &amp; VS Code derivatives extension:</strong> IBM watsonx (AAP 2.5+), Gemini (Vertex) [Coming Soon]</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Step 4: Connect the plumbing.</strong> We connect our monitoring tools to the platform. Now, whenever an alert comes in, the AI enriches it with context, waits for our thumbs-up, and fires off the right Ansible playbook to solve the issue.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Image%203.png" alt="Image 3">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_solution_guides_for_aiops_workflows"><a class="anchor" href="#_solution_guides_for_aiops_workflows"></a>Solution Guides for AIOps Workflows</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>AAP 2.7 introduces detailed <strong>AIOps workflows solution guides</strong> for leading partner integrations including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>IBM Instana</p>
+</li>
+<li>
+<p>ServiceNow</p>
+</li>
+<li>
+<p>Splunk</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These solution guides provide RAG-enabled walkthroughs focused on end-to-end AIOps automation scenarios (coming soon).</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="../chapter1/index.html">Installation, Upgrades, &amp; Platform Resilience</a></span>
+  <span class="next"><a href="../chapter3/index.html">Security, Governance, and Identity</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <img src="../../../_/img/rhl-logo-red.png" height="40px" alt="Red Hat"  href="https://redhat.com" >
+</footer><script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script defer src="../../../_/js/vendor/tabs.js"></script>
+<script defer src="../../../_/js/vendor/reading-time.js"></script>
+  </body>
+</html>
