@@ -2,7 +2,46 @@
 
 Welcome to the Key New Features of *Ansible Automation Platform (AAP) 2.7 course!*. In this course, we will explore the major architectural changes, AI advancements and security enhancements being introduced in this release.
 
+*Ansible Automation Platform 2.7* builds on the previous release with more innovation and features to reduce friction across every stage of the automation adoption journey—from first deployment to enterprise-scale and governance in an AI-centric world.
+
 image::AAP Image1.png[]
+
+== Automation that never stops advancing
+
+With Ansible Automation Platform 2.7, IT teams can:
+
+✓ *Empower platform engineering*, and boost developer productivity
+
+✓ *Drive automation adoption and scale* and eliminate friction
+
+✓ *Unlock AI-driven automation*, turning intelligence into trusted action
+
+The platform delivers improvements across *Efficiency | Resilience | Governance | Scale*
+
+== Key Themes
+
+=== Empower Platform Engineering
+
+- Visual execution environment builder + content discovery experience in the automation portal
+- MCP server-based assistant in Ansible VS Code extension provides faster building and debugging of automation content
+- Ansible development workspaces includes integrated development tools for content creation and testing based on best practices
+
+=== Drive Automation Adoption and Scale
+
+- Intelligent assistant supports "bring-your-own-knowledge" for more relevant model responses
+- Automation dashboard can be accessed directly within the platform UI
+- AAP now acts as an OIDC identity provider for HashiCorp Vault
+
+=== Additional Enhancements
+
+- *EDA:* In-flight rulebook event persistence increases rulebook resiliency; project synchronization allows resync option on restarts
+- *The self-service automation portal* can now be deployed on *RHEL 9/10*
+- *New Ansible Content Collections* for Windows, Splunk, Cisco, and more
+- *Ansible MCP server plugin* to integrate AI agents directly into playbooks
+- *Ansible Core 2.20* with Python modernization, new playbook capabilities, and more
+
+*Release date June 3, 2026. Some features are Developer or Technology Preview.*
+
 == Technology Preview Features
 
 Technology Preview features are not supported with Red Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process. For more information about the support scope of Red Hat Technology Preview features, see https://access.redhat.com/support/offerings/techpreview/[Technology Preview Features Support Scope].
