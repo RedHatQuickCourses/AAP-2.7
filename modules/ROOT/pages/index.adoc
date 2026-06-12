@@ -18,7 +18,7 @@ With Ansible Automation Platform 2.7, IT teams can:
 
 The platform delivers improvements across *Efficiency | Resilience | Governance | Scale*
 
-== Key Themes
+== Key Features
 
 === Empower Platform Engineering
 
