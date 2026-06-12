@@ -13,7 +13,7 @@ Installation and Upgrades AAP 2.7 completely *removes* the *RPM installation met
 
 == How to use it?
 
-You must first ensure you are on AAP 2.6, as direct upgrades from 2.4 or 2.5 are not supported. Choose either the containerized, operator, or appliance-based method, ensuring that any migration between methods happens while on the same Ansible Automation Platform version. We offer additional training on Ansible Automation Platform v2.4 to v2.6 upgrades and migrations via the following:
+You must first ensure you are on AAP 2.6, as direct upgrades from 2.4 or 2.5 are not supported. Choose either the containerized or operator based method, ensuring that any migration between methods happens while on the same Ansible Automation Platform version. We offer additional training on Ansible Automation Platform v2.4 to v2.6 upgrades and migrations via the following:
 
 - *Red Hat Learning Subscription users:* https://www.google.com/url?q=https://rol.redhat.com/rol/app/courses/hol021-2.6/pages/overview&sa=D&source=docs&ust=1780655672870307&usg=AOvVaw1V9JjLLdufydn1KfZfOk3O/[]
 - *Red Hat Partners:*  https://training-lms.redhat.com/sso/saml/auth/rhopen?RelayState=deeplinkoffering%3D86053966/[]
