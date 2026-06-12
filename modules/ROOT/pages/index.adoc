@@ -40,7 +40,7 @@ The platform delivers improvements across *Efficiency | Resilience | Governance 
 - *Ansible MCP server plugin* to integrate AI agents directly into playbooks
 - *Ansible Core 2.20* with Python modernization, new playbook capabilities, and more
 
-*Release date June 3, 2026. Some features are Developer or Technology Preview.*
+*Some features are Developer or Technology Preview.*
 
 == Technology Preview Features
 
