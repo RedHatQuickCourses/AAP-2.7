@@ -13,3 +13,33 @@ image::Image 4.png[]
 - *Seamless Secrets Management Integration:* By acting as an OIDC provider, AAP 2.7 allows external systems—specifically HashiCorp Vault—to cryptographically verify that an automated job is exactly who it claims to be before releasing sensitive infrastructure secrets.
 
 *Instructor Tip:* Before running the AAP 2.7 upgrade, execute the new CLI utility aap-detect-direct-component-access. This will automatically scan and pinpoint any legacy, direct-API scripts hidden in your environment so you can fix them before they are blocked.
+
+== AAP as an OIDC Identity Provider for HashiCorp Vault
+
+AAP 2.7 introduces the ability to use AAP as an *OIDC identity provider for Vault authentication* for secrets access [Tech Preview]. This integration provides:
+
+- *Simplified and centralized secrets management* for automation infrastructure
+- *Time-bound credentials* for automation—strengthening security with short-lived, dynamically-generated credentials
+- *Limit and secure secrets access* by leveraging OIDC authentication process with Vault
+- Use AAP as an identity provider for Vault authentication for secrets access
+
+== Workflow to Verify Access and Mitigate Leaked Tokens
+
+The JWT (JSON Web Token) authentication workflow enables:
+
+1. User requires elevated secret to run automation against Vault-secured infrastructure
+2. AAP JWT token authenticates via OIDC
+3. Vault returns a short-lived token for secret retrieval
+4. AAP retrieves the elevated secret
+5. Run automation with the secret
+
+This ensures that secrets are only accessible during the automation job execution, significantly reducing the risk of credential exposure.
+
+== Additional Resources
+
+- *Blog:* https://www.redhat.com/en/blog/strengthening-security-and-consistency-cloud-red-hat-and-hashicorp[Strengthening security and consistency in the cloud with Red Hat and HashiCorp]
+- *Customer-facing slides:*
+  * https://docs.google.com/presentation/d/1234567890/[ABU | Ansible + Vault 101]
+  * https://docs.google.com/presentation/d/1234567890/[ABU | Ansible + Vault 201]
+- *Documentation:* Available in official AAP 2.7 documentation
+- *Webinar (June 16 @ 10 am EDT):* https://www.redhat.com/en/events/webinar/applying-zero-trust-principles-automation-hashicorp-vault[Applying zero trust principles to automation with HashiCorp Vault]

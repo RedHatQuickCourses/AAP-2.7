@@ -13,10 +13,27 @@ image::Image 2.png[]
 
 == How Someone Actually Uses This (The Walkthrough)
 
-To put this into practice, we would establish an integrated workflow that continuously feeds our environment's unique context directly into our automated operations. 
+To put this into practice, we would establish an integrated workflow that continuously feeds our environment's unique context directly into our automated operations.
 
-- *Step 1: Build your custom knowledge base.* You can now inject your own internal documentation into the assistant's Retrieval-Augmented Generation (RAG) pipeline.The system can reference a secondary RAG image/repository to answer end-user questions.
-- *Step 2: Turn on the MCP Server.* The MCP integration (entering Tech Preview) enables Large Language Models (LLMs) to interact with and manage AAP through natural language. You can extend Red Hat-maintained content use cases via the MCP plugin and include MCP servers in Execution Environments.
-- *Step 3: Connect the plumbing.* We connect our monitoring tools to the platform. Now, whenever an alert comes in, the AI enriches it with context, waits for our thumbs-up, and fires off the right Ansible playbook to solve the issue.
+- *Step 1: Build your custom knowledge base with BYOK.* You can now inject your own internal documentation into the assistant's Retrieval-Augmented Generation (RAG) pipeline using *"Bring-Your-Own-Knowledge" (BYOK)* [Tech Preview]. The intelligent assistant allows organizations to inject internal policies, best practices, and procedures into the RAG pipeline for more relevant and meaningful model responses. This system can reference a secondary RAG image/repository to answer end-user questions with organization-specific context.
+
+- *Step 2: Turn on the MCP Server.* The *MCP server for Ansible Automation Platform* [Tech Preview] enables Large Language Models (LLMs) and agentic systems to interact with and manage AAP through natural language. You can extend Red Hat-maintained content use cases via the *Ansible MCP server plugin* to integrate AI agents directly into playbooks, and include MCP servers in Execution Environments. The MCP server exposes AAP capabilities as declarative endpoints for secure querying, executing automation jobs, managing credentials, and more.
+
+- *Step 3: Connect AI model providers.* AAP 2.7 supports flexible connectivity with Red Hat AI platforms and bring-your-own-model (BYOM) providers including:
+  * *Red Hat AI:* Red Hat AI inference server, RHEL AI, or Red Hat OpenShift AI
+  * *Supported 3rd-party model providers:* OpenAI and Azure Open AI
+  * *Coding assistant in Ansible VS Code & VS Code derivatives extension:* IBM watsonx (AAP 2.5+), Gemini (Vertex) [Coming Soon]
+
+- *Step 4: Connect the plumbing.* We connect our monitoring tools to the platform. Now, whenever an alert comes in, the AI enriches it with context, waits for our thumbs-up, and fires off the right Ansible playbook to solve the issue.
 
 image::Image 3.png[]
+
+== Solution Guides for AIOps Workflows
+
+AAP 2.7 introduces detailed *AIOps workflows solution guides* for leading partner integrations including:
+
+- IBM Instana
+- ServiceNow
+- Splunk
+
+These solution guides provide RAG-enabled walkthroughs focused on end-to-end AIOps automation scenarios (coming soon).

@@ -17,9 +17,28 @@ To help engineers write automation code more efficiently, AAP 2.7 introduces cor
 - *Red Hat AI:* Powers the *Intelligent assistant* and *Code assistant*.
 - *Automated Inference:* Connected through the MCP server to Observability Platforms.
 
-*Section 2: ansible.platform Performance Improvements* 
+*Section 2: ansible.platform Performance Improvements*
 Under the hood, AAP 2.7 is making significant changes to how the platform processes settings and access controls to improve overall execution performance.
 
 - *Refactoring for Speed:* Within the *ansible.platform* collection, existing Role-Based Access Control (RBAC) and global settings have been heavily refactored, transitioning them from standard modules to action plugins.
 - *Why does it matter?* These performance improvements are not just about speed today. Most importantly, this refactoring represents the critical foundational work required to start transitioning more "Configuration as Code" capabilities directly into *ansible.platform* in future releases.
 - *How to use it?* No specific manual changes are required from your developers or engineers. Once you upgrade your environment to AAP 2.7, the platform will automatically utilize these highly efficient action plugins for RBAC and settings processing.
+
+== Additional Platform Enhancements
+
+=== Platform Foundation
+
+- *All API traffic through gateway:* Single ingress, simplified architecture
+- *Common tasking system:* Dispatcherd unifies platform services
+- *PostgreSQL 16 & 17 support:* Database modernization
+- *Django 5.2 LTS:* Framework upgrade for long-term support
+- *Centralized OpenAPI spec:* Enforced API consistency across services
+- *ansible.platform Phase 1:* CaC foundations for unified collection
+
+=== UX & Customer RFEs
+
+- *Bulk host delete:* Long-requested operational efficiency
+- *Auth mapping label clarity:* Reduced confusion in authentication setup
+- *Repository sync date in UI:* Visibility into last sync status
+- *Feature flags runtime UI:* Platform operator control
+- *Workflow convergence improvements:* Better multi-path workflow handling

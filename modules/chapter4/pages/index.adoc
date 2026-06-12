@@ -4,7 +4,36 @@ The developer and self-service experiences have been streamlined to empower your
 
 image::Image 5.png[]
 
-*Developer Tools:* This release focuses heavily on speeding up content creation and reducing context switching. The Execution Environment (EE) Builder now features automated image creation. Additionally, you now have a single, searchable view of Ansible collections aggregated from multiple sources (like Automation Hub and Automation Content). Furthermore, the VS Code Ansible plugin has added direct support for Google Vertex and RHEL AI models.
+== Empower Platform Engineering
+
+*Developer Tools:* This release focuses heavily on speeding up content creation and reducing context switching.
+
+=== Visual Execution Environment Builder + Content Discovery
+
+The *visual execution environment builder* reduces time-to-automate and ensures consistency and governance:
+
+- *Visual authoring:* Eliminates YAML syntax errors allowing users to build consistent EEs with guided, step-by-step workflows
+- *Integrated Ansible Content Collections:* Developers can quickly locate the collections they need within the builder experience
+- *Governance:* Customers can add approved custom EE builder templates. Red Hat provides recommended EE templates for IT domain use cases
+- *Platform experience:* Accessed directly via automation portal, making SCM and Git interactions more seamless
+
+=== Ansible Development Workspaces [Tech Preview]
+
+*Ansible development workspaces* include integrated development tools for content creation and testing based on best practices:
+
+- Integrated, Ansible-specific tooling + generative AI, built on OpenShift Dev Spaces
+- Simplifies creation, testing, and deployment of Ansible content
+- Provides environment that is consistent and more secure—based on Ansible-recommended practices
+
+=== MCP Server-based Assistant in Ansible VS Code Extension
+
+The *MCP server for VS Code extension* provides:
+
+- *AI-powered assistance* for creating, testing, and debugging automation content by exposing Ansible development tools
+- Creates the foundation for *compliant-by-design* content, *context-aware linting*, and AI-assisted debugging through natural language interactions
+- Boosts developer productivity and reduces context switching
+
+Additionally, you now have a single, searchable view of Ansible collections aggregated from multiple sources (like Automation Hub and Automation Content). Furthermore, the VS Code Ansible plugin has added direct support for Google Vertex and RHEL AI models.
 
 == *Why does it matter?*
 
@@ -15,12 +44,30 @@ This drastically simplifies the developer workflow by eliminating manual build c
 - Utilize the centralized platform UI to discover reusable content collections and trigger automated EE builds without touching the command line. For detail step to step guide https://interact.redhat.com/share/qIZHKuUp78I4yc8Vu2a9/[Automation Portal - Execution Environment Builder]
 - Connect your VS Code Ansible extension directly to Google Vertex or RHEL AI to start receiving intelligent code suggestions as you write playbooks.
 
+== Drive Automation Adoption and Scale
+
 *Self-service Enhancements and Usability* Platform administrators and playbook authors now have powerful new ways to curate the user experience and communicate with end-users.
+
+=== Automation Dashboard [Tech Preview]
+
+The new *Automation dashboard* can be accessed directly within the platform UI and provides:
+
+- *Demonstrate value and measure ROI*
+- *Make smarter, data-driven decisions*
+- *Optimize and right-size your automation*
+- *Securely report and share your data*
+- *New! Integration within the Ansible Automation Platform UI*
+
+NOTE: Customers with multiple AAP deployments/clusters are encouraged to use the https://access.redhat.com/articles/7102421[automation dashboard utility deployment on RHEL 9/10] or integrate service with internal BI tools.
+
+=== Self-Service Portal Enhancements
 
 - *Direct Feedback:* Playbook authors can use *ansible.builtin.debug* messages to send URLs and guidance directly to self-service users, displaying the results right in the self-service portal logs.
 - *Template Filtering:* Job Template sync filtering now supports *excludeLabels*.
-- *Runtime Feature Flags:* You can now enable or disable feature flags directly from the user interface during runtime.
+- *Runtime Feature Flags:* You can now enable or disable feature flags directly from the user interface during runtime using inventory file during containerized install to integrate dashboard within platform UI.
 - *Accessibility:* The unified UI now meets Web Content Accessibility Guidelines (WCAG) 2.2.
+
+NOTE: Automation dashboard can not be enabled without metrics service. Containerized installer or operator-based deployment as part of AAP installation.
 
 == Why does it matter?
 
