@@ -92,7 +92,7 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../chapter7/index.html">Conclusion</a>
+    <a class="nav-link" href="../chapter7/index.html">Event-Driven Ansible Enhancements</a>
   </li>
 </ul>
   </li>
@@ -169,6 +169,91 @@ The platform now introduces native OpenID Connect (OIDC) provider capabilities a
 </div>
 <div class="paragraph">
 <p><strong>Instructor Tip:</strong> Before running the AAP 2.7 upgrade, execute the new CLI utility aap-detect-direct-component-access. This will automatically scan and pinpoint any legacy, direct-API scripts hidden in your environment so you can fix them before they are blocked.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_aap_as_an_oidc_identity_provider_for_hashicorp_vault"><a class="anchor" href="#_aap_as_an_oidc_identity_provider_for_hashicorp_vault"></a>AAP as an OIDC Identity Provider for HashiCorp Vault</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>AAP 2.7 introduces the ability to use AAP as an <strong>OIDC identity provider for Vault authentication</strong> for secrets access [Tech Preview]. This integration provides:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Simplified and centralized secrets management</strong> for automation infrastructure</p>
+</li>
+<li>
+<p><strong>Time-bound credentials</strong> for automation—strengthening security with short-lived, dynamically-generated credentials</p>
+</li>
+<li>
+<p><strong>Limit and secure secrets access</strong> by leveraging OIDC authentication process with Vault</p>
+</li>
+<li>
+<p>Use AAP as an identity provider for Vault authentication for secrets access</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_workflow_to_verify_access_and_mitigate_leaked_tokens"><a class="anchor" href="#_workflow_to_verify_access_and_mitigate_leaked_tokens"></a>Workflow to Verify Access and Mitigate Leaked Tokens</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The JWT (JSON Web Token) authentication workflow enables:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requires elevated secret to run automation against Vault-secured infrastructure</p>
+</li>
+<li>
+<p>AAP JWT token authenticates via OIDC</p>
+</li>
+<li>
+<p>Vault returns a short-lived token for secret retrieval</p>
+</li>
+<li>
+<p>AAP retrieves the elevated secret</p>
+</li>
+<li>
+<p>Run automation with the secret</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This ensures that secrets are only accessible during the automation job execution, significantly reducing the risk of credential exposure.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_additional_resources"><a class="anchor" href="#_additional_resources"></a>Additional Resources</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Blog:</strong> <a href="https://www.redhat.com/en/blog/strengthening-security-and-consistency-cloud-red-hat-and-hashicorp">Strengthening security and consistency in the cloud with Red Hat and HashiCorp</a></p>
+</li>
+<li>
+<p><strong>Customer-facing slides:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.google.com/presentation/d/1234567890/">ABU | Ansible + Vault 101</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/presentation/d/1234567890/">ABU | Ansible + Vault 201</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Documentation:</strong> Available in official AAP 2.7 documentation</p>
+</li>
+<li>
+<p><strong>Webinar (June 16 @ 10 am EDT):</strong> <a href="https://www.redhat.com/en/events/webinar/applying-zero-trust-principles-automation-hashicorp-vault">Applying zero trust principles to automation with HashiCorp Vault</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>

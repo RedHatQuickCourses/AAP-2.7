@@ -92,7 +92,7 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../chapter7/index.html">Conclusion</a>
+    <a class="nav-link" href="../chapter7/index.html">Event-Driven Ansible Enhancements</a>
   </li>
 </ul>
   </li>
@@ -178,13 +178,29 @@ This unified framework injects organization-specific context directly into the A
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Step 1: Build your custom knowledge base.</strong> You can now inject your own internal documentation into the assistant&#8217;s Retrieval-Augmented Generation (RAG) pipeline.The system can reference a secondary RAG image/repository to answer end-user questions.</p>
+<p><strong>Step 1: Build your custom knowledge base with BYOK.</strong> You can now inject your own internal documentation into the assistant&#8217;s Retrieval-Augmented Generation (RAG) pipeline using <strong>"Bring-Your-Own-Knowledge" (BYOK)</strong> [Tech Preview]. The intelligent assistant allows organizations to inject internal policies, best practices, and procedures into the RAG pipeline for more relevant and meaningful model responses. This system can reference a secondary RAG image/repository to answer end-user questions with organization-specific context.</p>
 </li>
 <li>
-<p><strong>Step 2: Turn on the MCP Server.</strong> The MCP integration (entering Tech Preview) enables Large Language Models (LLMs) to interact with and manage AAP through natural language. You can extend Red Hat-maintained content use cases via the MCP plugin and include MCP servers in Execution Environments.</p>
+<p><strong>Step 2: Turn on the MCP Server.</strong> The <strong>MCP server for Ansible Automation Platform</strong> [Tech Preview] enables Large Language Models (LLMs) and agentic systems to interact with and manage AAP through natural language. You can extend Red Hat-maintained content use cases via the <strong>Ansible MCP server plugin</strong> to integrate AI agents directly into playbooks, and include MCP servers in Execution Environments. The MCP server exposes AAP capabilities as declarative endpoints for secure querying, executing automation jobs, managing credentials, and more.</p>
 </li>
 <li>
-<p><strong>Step 3: Connect the plumbing.</strong> We connect our monitoring tools to the platform. Now, whenever an alert comes in, the AI enriches it with context, waits for our thumbs-up, and fires off the right Ansible playbook to solve the issue.</p>
+<p><strong>Step 3: Connect AI model providers.</strong> AAP 2.7 supports flexible connectivity with Red Hat AI platforms and bring-your-own-model (BYOM) providers including:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Red Hat AI:</strong> Red Hat AI inference server, RHEL AI, or Red Hat OpenShift AI</p>
+</li>
+<li>
+<p><strong>Supported 3rd-party model providers:</strong> OpenAI and Azure Open AI</p>
+</li>
+<li>
+<p><strong>Coding assistant in Ansible VS Code &amp; VS Code derivatives extension:</strong> IBM watsonx (AAP 2.5+), Gemini (Vertex) [Coming Soon]</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Step 4: Connect the plumbing.</strong> We connect our monitoring tools to the platform. Now, whenever an alert comes in, the AI enriches it with context, waits for our thumbs-up, and fires off the right Ansible playbook to solve the issue.</p>
 </li>
 </ul>
 </div>
@@ -192,6 +208,30 @@ This unified framework injects organization-specific context directly into the A
 <div class="content">
 <img src="_images/Image%203.png" alt="Image 3">
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_solution_guides_for_aiops_workflows"><a class="anchor" href="#_solution_guides_for_aiops_workflows"></a>Solution Guides for AIOps Workflows</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>AAP 2.7 introduces detailed <strong>AIOps workflows solution guides</strong> for leading partner integrations including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>IBM Instana</p>
+</li>
+<li>
+<p>ServiceNow</p>
+</li>
+<li>
+<p>Splunk</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These solution guides provide RAG-enabled walkthroughs focused on end-to-end AIOps automation scenarios (coming soon).</p>
 </div>
 </div>
 </div>

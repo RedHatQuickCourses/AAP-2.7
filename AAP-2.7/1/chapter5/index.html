@@ -92,7 +92,7 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../chapter7/index.html">Conclusion</a>
+    <a class="nav-link" href="../chapter7/index.html">Event-Driven Ansible Enhancements</a>
   </li>
 </ul>
   </li>
@@ -135,8 +135,34 @@
 </aside>
 <article class="doc">
 <h1 class="page">Certified Content Collection Expansions</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
 <p><strong>Automation Platform (AAP) 2.7</strong> features massive updates to our supported integration collections:</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_new_ansible_content_collections_available_today"><a class="anchor" href="#_new_ansible_content_collections_available_today"></a>New Ansible Content Collections Available Today</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>AAP 2.7 introduces new certified content collections for:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Windows:</strong> Splunk, Cisco, and more</p>
+</li>
+<li>
+<p><strong>Splunk:</strong> Full support across enterprise, es, and itsi collections</p>
+</li>
+<li>
+<p><strong>Microsoft and cloud:</strong> Microsoft System Center Operations Manager (SCOM) (Azure and Windows), Amazon.ai support for DevOps Guru to EDA</p>
+</li>
+<li>
+<p><strong>Ansible Automation Platform:</strong> AAP configuration-as-code, RBAC/settings refactoring, performance improvements</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p><strong>HashiCorp Vault (hashicorp.vault)</strong> Users can now deploy, configure, and scale Vault clusters using provided playbooks. Event-Driven Ansible can trigger workflows based on Vault events.</p>
@@ -199,6 +225,76 @@
 <p><strong>How to use it?</strong> Apply the pre-built roles to your Windows environments and pair them with standard Ansible Automation Platform schedules or Event-Driven Ansible to automatically correct configuration drift, keeping Windows environments continuously aligned with organizational and federal security mandates without manual intervention.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p><strong>Cloud Infrastructure Collections</strong> Enhanced support for:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>google.cloud:</strong> Cloud Build 2nd gen, Parameter Manager, compute, Secret Manager, Storage</p>
+</li>
+<li>
+<p><strong>azure.azcollection:</strong> Azure services: ML, App Configuration, Front Door, Storage, Arc/HCI</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Networking Collections</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>cisco.intersight:</strong> 100+ modules for Day-2 ops, firmware, and port configuration</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Security + Compliance</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>hashicorp.vault:</strong> Secrets management, PKI, dynamic credentials, EDA integration</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Observability + Incident Response</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>splunk.enterprise:</strong> Universal Forwarder lifecycle automation</p>
+</li>
+<li>
+<p><strong>splunk.es:</strong> Enterprise Security incident workflows, response plan automation</p>
+</li>
+<li>
+<p><strong>splunk.itsi:</strong> IT Service Intelligence with EDA integration for closed-loop remediation</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Windows Patching &amp; Management</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>microsoft.mecm:</strong> Endpoint Configuration Manager: patch orchestration, client actions, and health checks</p>
+</li>
+<li>
+<p><strong>microsoft.scom:</strong> System Center Operations Manager infrastructure + EDA alert routing</p>
+</li>
+<li>
+<p><strong>infra.mecm_ops:</strong> Higher-level validated roles on top of MECM: emergency patching, health reports</p>
+</li>
+<li>
+<p><strong>infra.windows_ops:</strong> Windows security baseline enforcement (DISA STIG, CIS benchmarks, drift remediation)</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="../chapter4/index.html">Developer and User Experience</a></span>

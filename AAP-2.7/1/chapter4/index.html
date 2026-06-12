@@ -92,7 +92,7 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../chapter7/index.html">Conclusion</a>
+    <a class="nav-link" href="../chapter7/index.html">Event-Driven Ansible Enhancements</a>
   </li>
 </ul>
   </li>
@@ -145,8 +145,76 @@
 <img src="_images/Image%205.png" alt="Image 5">
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_empower_platform_engineering"><a class="anchor" href="#_empower_platform_engineering"></a>Empower Platform Engineering</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><strong>Developer Tools:</strong> This release focuses heavily on speeding up content creation and reducing context switching. The Execution Environment (EE) Builder now features automated image creation. Additionally, you now have a single, searchable view of Ansible collections aggregated from multiple sources (like Automation Hub and Automation Content). Furthermore, the VS Code Ansible plugin has added direct support for Google Vertex and RHEL AI models.</p>
+<p><strong>Developer Tools:</strong> This release focuses heavily on speeding up content creation and reducing context switching.</p>
+</div>
+<div class="sect2">
+<h3 id="_visual_execution_environment_builder_content_discovery"><a class="anchor" href="#_visual_execution_environment_builder_content_discovery"></a>Visual Execution Environment Builder + Content Discovery</h3>
+<div class="paragraph">
+<p>The <strong>visual execution environment builder</strong> reduces time-to-automate and ensures consistency and governance:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Visual authoring:</strong> Eliminates YAML syntax errors allowing users to build consistent EEs with guided, step-by-step workflows</p>
+</li>
+<li>
+<p><strong>Integrated Ansible Content Collections:</strong> Developers can quickly locate the collections they need within the builder experience</p>
+</li>
+<li>
+<p><strong>Governance:</strong> Customers can add approved custom EE builder templates. Red Hat provides recommended EE templates for IT domain use cases</p>
+</li>
+<li>
+<p><strong>Platform experience:</strong> Accessed directly via automation portal, making SCM and Git interactions more seamless</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ansible_development_workspaces_tech_preview"><a class="anchor" href="#_ansible_development_workspaces_tech_preview"></a>Ansible Development Workspaces [Tech Preview]</h3>
+<div class="paragraph">
+<p><strong>Ansible development workspaces</strong> include integrated development tools for content creation and testing based on best practices:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Integrated, Ansible-specific tooling + generative AI, built on OpenShift Dev Spaces</p>
+</li>
+<li>
+<p>Simplifies creation, testing, and deployment of Ansible content</p>
+</li>
+<li>
+<p>Provides environment that is consistent and more secure—based on Ansible-recommended practices</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mcp_server_based_assistant_in_ansible_vs_code_extension"><a class="anchor" href="#_mcp_server_based_assistant_in_ansible_vs_code_extension"></a>MCP Server-based Assistant in Ansible VS Code Extension</h3>
+<div class="paragraph">
+<p>The <strong>MCP server for VS Code extension</strong> provides:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>AI-powered assistance</strong> for creating, testing, and debugging automation content by exposing Ansible development tools</p>
+</li>
+<li>
+<p>Creates the foundation for <strong>compliant-by-design</strong> content, <strong>context-aware linting</strong>, and AI-assisted debugging through natural language interactions</p>
+</li>
+<li>
+<p>Boosts developer productivity and reduces context switching</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Additionally, you now have a single, searchable view of Ansible collections aggregated from multiple sources (like Automation Hub and Automation Content). Furthermore, the VS Code Ansible plugin has added direct support for Google Vertex and RHEL AI models.</p>
+</div>
 </div>
 </div>
 </div>
@@ -171,9 +239,53 @@
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_drive_automation_adoption_and_scale"><a class="anchor" href="#_drive_automation_adoption_and_scale"></a>Drive Automation Adoption and Scale</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><strong>Self-service Enhancements and Usability</strong> Platform administrators and playbook authors now have powerful new ways to curate the user experience and communicate with end-users.</p>
 </div>
+<div class="sect2">
+<h3 id="_automation_dashboard_tech_preview"><a class="anchor" href="#_automation_dashboard_tech_preview"></a>Automation Dashboard [Tech Preview]</h3>
+<div class="paragraph">
+<p>The new <strong>Automation dashboard</strong> can be accessed directly within the platform UI and provides:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Demonstrate value and measure ROI</strong></p>
+</li>
+<li>
+<p><strong>Make smarter, data-driven decisions</strong></p>
+</li>
+<li>
+<p><strong>Optimize and right-size your automation</strong></p>
+</li>
+<li>
+<p><strong>Securely report and share your data</strong></p>
+</li>
+<li>
+<p><strong>New! Integration within the Ansible Automation Platform UI</strong></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Customers with multiple AAP deployments/clusters are encouraged to use the <a href="https://access.redhat.com/articles/7102421">automation dashboard utility deployment on RHEL 9/10</a> or integrate service with internal BI tools.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_self_service_portal_enhancements"><a class="anchor" href="#_self_service_portal_enhancements"></a>Self-Service Portal Enhancements</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -183,12 +295,25 @@
 <p><strong>Template Filtering:</strong> Job Template sync filtering now supports <strong>excludeLabels</strong>.</p>
 </li>
 <li>
-<p><strong>Runtime Feature Flags:</strong> You can now enable or disable feature flags directly from the user interface during runtime.</p>
+<p><strong>Runtime Feature Flags:</strong> You can now enable or disable feature flags directly from the user interface during runtime using inventory file during containerized install to integrate dashboard within platform UI.</p>
 </li>
 <li>
 <p><strong>Accessibility:</strong> The unified UI now meets Web Content Accessibility Guidelines (WCAG) 2.2.</p>
 </li>
 </ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Automation dashboard can not be enabled without metrics service. Containerized installer or operator-based deployment as part of AAP installation.
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 </div>
