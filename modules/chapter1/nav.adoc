@@ -6,4 +6,5 @@
 ** xref:section5.adoc[]
 ** xref:section6.adoc[]
 ** xref:section7.adoc[]
+** xref:section8.adoc[]
 
