@@ -1,14 +1,13 @@
 = Key New Features of Ansible Automation Platform 2.7
+:navtitle: Home
+
+== Introduction
 
 Welcome to the Key New Features of *Ansible Automation Platform (AAP) 2.7 course!*. In this course, we will explore the major architectural changes, AI advancements and security enhancements being introduced in this release.
 
-*Ansible Automation Platform 2.7* builds on the previous release with more innovation and features to reduce friction across every stage of the automation adoption journey—from first deployment to enterprise-scale and governance in an AI-centric world.
+== Objectives
 
-image::AAP Image1.png[]
-
-== Automation that never stops advancing
-
-With Ansible Automation Platform 2.7, IT teams can:
+On completing this course, you should be able to:
 
 ✓ *Empower platform engineering*, and boost developer productivity
 
@@ -18,34 +17,17 @@ With Ansible Automation Platform 2.7, IT teams can:
 
 The platform delivers improvements across *Efficiency | Resilience | Governance | Scale*
 
-== Key Features
+Duration: 30 minutes
 
-=== Empower Platform Engineering
+== Prerequisites
 
-- Visual execution environment builder + content discovery experience in the automation portal
-- MCP server-based assistant in Ansible VS Code extension provides faster building and debugging of automation content
-- Ansible development workspaces includes integrated development tools for content creation and testing based on best practices
+To get the most out of this course, it is recommended that you have the basic understanding of Ansible Automation Platform and its components. Familiarity with automation concepts and practices will also be beneficial.
 
-=== Drive Automation Adoption and Scale
+== Contributors
 
-- Intelligent assistant supports "bring-your-own-knowledge" for more relevant model responses
-- Automation dashboard can be accessed directly within the platform UI
-- AAP now acts as an OIDC identity provider for HashiCorp Vault
+The PTL team acknowledges the valuable contributions of the following Red Hat associates:
 
-=== Additional Enhancements
-
-- *EDA:* In-flight rulebook event persistence increases rulebook resiliency; project synchronization allows resync option on restarts
-- *The self-service automation portal* can now be deployed on *RHEL 9/10*
-- *New Ansible Content Collections* for Windows, Splunk, Cisco, and more
-- *Ansible MCP server plugin* to integrate AI agents directly into playbooks
-- *Ansible Core 2.20* with Python modernization, new playbook capabilities, and more
-
-*Some features are Developer or Technology Preview.*
-
-== Technology Preview Features
-
-Technology Preview features are not supported with Red Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process. For more information about the support scope of Red Hat Technology Preview features, see https://access.redhat.com/support/offerings/techpreview/[Technology Preview Features Support Scope].
-
-== Developer Preview Features
-
-Developer Preview features are not supported by Red Hat in any way and are not functionally complete or production-ready. Do not use Developer Preview features for production or business-critical workloads. Developer Preview features provide early access to functionality in advance of possible inclusion in a Red Hat product offering. Customers can use these features to test functionality and provide feedback during the development process. Developer Preview features might not have any documentation, are subject to change or removal at any time, and have received limited testing. Red Hat might provide ways to submit feedback on Developer Preview features without an associated SLA. For more information about the support scope of Red Hat Developer Preview features, see https://access.redhat.com/support/offerings/devpreview/[Developer Preview Support Scope].
+- Andrius Benokraitis (Product Marketing Senior Manager)
+- Rutuja Deshmukh (Content Architect)
+- Anna Swicegood (Learning Product Manager)
+- Amrinder Singh (Content Architect)
