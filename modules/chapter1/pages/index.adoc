@@ -1,45 +1,39 @@
-= Installation, Upgrades, & Platform Resilience
+= Key New Features of Ansible Automation Platform 2.7
 
-Before we can use the new features, we must understand how to deploy and upgrade to AAP 2.7, alongside its resilience improvements.
+Welcome to the Key New Features of *Ansible Automation Platform (AAP) 2.7 course!*. In this course, we will explore the major architectural changes, AI advancements and security enhancements being introduced in this release.
 
-Installation and Upgrades AAP 2.7 completely *removes* the *RPM installation method*, shifting strictly to containerized and operator-supported installation methods, though Ansible Development Tools will still be accessible via RPM. 
+*Ansible Automation Platform 2.7* builds on the previous release with more innovation and features to reduce friction across every stage of the automation adoption journey—from first deployment to enterprise-scale and governance in an AI-centric world.
 
+image::AAP Image1.png[]
 
-== Why AAP 2.7 is Exclusively Containerized:
-- *Farewell to RPMs*: AAP 2.7 officially removes the legacy RPM installer, eliminating host-OS dependency bottlenecks and package conflicts.
-- *Absolute Isolation*: Containers decouple the automation control plane from the underlying OS, making upgrades and rollbacks entirely predictable.
-- *Enterprise Hardening*: Standardizing on Podman and Red Hat OpenShift ensures zero-downtime scalability and rootless container security.
-- *Environment Consistency*: Guarantees a reliable, maintainable, and portable automation fabric across hybrid cloud environments.
+== Key Features
 
-== How to use it?
+=== Empower Platform Engineering
 
-You must first ensure you are on AAP 2.6, as direct upgrades from 2.4 or 2.5 are not supported. Choose either the containerized or operator based method, ensuring that any migration between methods happens while on the same Ansible Automation Platform version. We offer additional training on Ansible Automation Platform v2.4 to v2.6 upgrades and migrations via the following:
+- Visual execution environment builder + content discovery experience in the automation portal
+- MCP server-based assistant in Ansible VS Code extension provides faster building and debugging of automation content
+- Ansible development workspaces includes integrated development tools for content creation and testing based on best practices
 
-- *Red Hat Learning Subscription users:* https://www.google.com/url?q=https://rol.redhat.com/rol/app/courses/hol021-2.6/pages/overview&sa=D&source=docs&ust=1780655672870307&usg=AOvVaw1V9JjLLdufydn1KfZfOk3O/[]
-- *Red Hat Partners:*  https://training-lms.redhat.com/sso/saml/auth/rhopen?RelayState=deeplinkoffering%3D86053966/[]
-- *Red Hat Associates:* https://training-lms.redhat.com/sso/saml/auth/rhlpint?RelayState=deeplinkoffering%3D86053961/[]
+=== Drive Automation Adoption and Scale
 
-NOTE: Customers on older versions of AAP need to upgrade to 2.6, then upgrade to 2.7. A migration to a new OS or topology may be required. RPM-based installations are not available with AAP 2.7+
+- Intelligent assistant supports "bring-your-own-knowledge" for more relevant model responses
+- Automation dashboard can be accessed directly within the platform UI
+- AAP now acts as an OIDC identity provider for HashiCorp Vault
 
-== Self-Service Automation Portal on RHEL 9/10
+=== Additional Enhancements
 
-The new *self-service automation portal* can now be deployed on *RHEL 9/10*, providing a streamlined "point-and-click" Ansible automation experience to a broader set of users within the organization. Domain subject matter experts who aren't Ansible users or experts now have a dedicated self-service portal from which they can launch a range of automation jobs for core use cases, without needing full access to AAP.
+- *EDA:* In-flight rulebook event persistence increases rulebook resiliency; project synchronization allows resync option on restarts
+- *The self-service automation portal* can now be deployed on *RHEL 9/10*
+- *New Ansible Content Collections* for Windows, Splunk, Cisco, and more
+- *Ansible MCP server plugin* to integrate AI agents directly into playbooks
+- *Ansible Core 2.20* with Python modernization, new playbook capabilities, and more
 
+*Some features are Developer or Technology Preview.*
 
-== Enhanced Scalability and Reliability:
+== Technology Preview Features
 
-Event-Driven Ansible (EDA) rulebook executions in AAP 2.7 introduce robust event persistence mechanisms, ensuring the platform seamlessly scales under heavy automation workloads. Concurrently, automation controller projects leverage instantaneous, automated re-syncing immediately following a Git webhook or repository update, maintaining absolute synchronization between your Infrastructure-as-Code (IaC) and the execution environment.
+Technology Preview features are not supported with Red Hat production service level agreements (SLAs) and might not be functionally complete. Red Hat does not recommend using them in production. These features provide early access to upcoming product features, enabling customers to test functionality and provide feedback during the development process. For more information about the support scope of Red Hat Technology Preview features, see https://access.redhat.com/support/offerings/techpreview/[Technology Preview Features Support Scope].
 
-== Why Does it Matter?
+== Developer Preview Features
 
-- *Zero Dropped Events*: During network outages, system restarts, or unexpected heavy loads, the EDA rule engine preserves event states. This guarantees that critical enterprise alerts are never lost or dropped in transit.
-
-- *Elimination of Configuration Drift*: Automated project re-syncing removes manual intervention and delay. As soon as a developer pushes a change to Git, the automation controller updates in near real-time, preventing the system from running outdated or mismatched automation playbooks.
-
-== How to use it?
-
-- *Enable Persistence in EDA*: Configure your EDA controller activation to utilize the new persistent storage backends, ensuring event streams are retained across container lifecycles.
-
-- *Configure Git Webhooks*: Link your Git repository (GitHub, GitLab, etc.) to the AAP 2.7 automation controller using webhooks.
-
-- *Automate the Sync*: Once the webhook is active, simply commit and push updates to your rulebooks or playbooks. The automation controller automatically detects the webhook event and triggers an immediate, silent background re-sync—no manual refreshing or complex scheduling required.
+Developer Preview features are not supported by Red Hat in any way and are not functionally complete or production-ready. Do not use Developer Preview features for production or business-critical workloads. Developer Preview features provide early access to functionality in advance of possible inclusion in a Red Hat product offering. Customers can use these features to test functionality and provide feedback during the development process. Developer Preview features might not have any documentation, are subject to change or removal at any time, and have received limited testing. Red Hat might provide ways to submit feedback on Developer Preview features without an associated SLA. For more information about the support scope of Red Hat Developer Preview features, see https://access.redhat.com/support/offerings/devpreview/[Developer Preview Support Scope].

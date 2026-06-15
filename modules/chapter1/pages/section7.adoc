@@ -1,6 +1,8 @@
-= Event-Driven Ansible Enhancements
+= Conclusion
 
-AAP 2.7 introduces significant enhancements to Event-Driven Ansible (EDA) to increase reliability, flexibility, and control.
+*AAP 2.7 represents a massive shift from standard task execution to intelligent, agentic AI operations.* It future-proofs your organization by heavily optimizing core platform performance with refactored action plugins, completely modernizing your security posture with zero-trust OIDC workload identities, and massively expanding out-of-the-box compliance and Day-2 operations through updated certified collections.
+
+*This concludes our deep dive into Ansible Automation Platform (AAP) 2.7.* You are now equipped with the essential knowledge to seamlessly upgrade your architecture, utilize agentic AI operations, deploy robust zero-trust identity policies, and properly manage your node inventory tracking.
 
 == What's New in Event-Driven Ansible?
 
@@ -40,9 +42,3 @@ Enhanced design and control for EDA projects and execution:
 - *Splunk enterprise* for managing SPLUNK agents and more across the enterprise
 - *Microsoft System Center Operations Manager (SCOM)* (Azure and windows)
 - *Amazon.ai* support for DevOps Guru to EDA
-
-= Conclusion
-
-*AAP 2.7 represents a massive shift from standard task execution to intelligent, agentic AI operations.* It future-proofs your organization by heavily optimizing core platform performance with refactored action plugins, completely modernizing your security posture with zero-trust OIDC workload identities, and massively expanding out-of-the-box compliance and Day-2 operations through updated certified collections.
-
-*This concludes our deep dive into Ansible Automation Platform (AAP) 2.7.* You are now equipped with the essential knowledge to seamlessly upgrade your architecture, utilize agentic AI operations, deploy robust zero-trust identity policies, and properly manage your node inventory tracking.
