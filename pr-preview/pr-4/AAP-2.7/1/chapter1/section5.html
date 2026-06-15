@@ -146,130 +146,40 @@
 </li>
 </ul>
 </div>
+<div class="sect2">
+<h3 id="_hashicorp_vault_hashicorp_vault"><a class="anchor" href="#_hashicorp_vault_hashicorp_vault"></a>HashiCorp Vault (hashicorp.vault)</h3>
 <div class="paragraph">
-<p><strong>HashiCorp Vault (hashicorp.vault)</strong> Users can now deploy, configure, and scale Vault clusters using provided playbooks. Event-Driven Ansible can trigger workflows based on Vault events.</p>
-</div>
-<div class="sect3">
-<h4 id="_why_does_it_matter"><a class="anchor" href="#_why_does_it_matter"></a>Why does it matter?</h4>
-<div class="paragraph">
-<p>It natively enables dynamic credentials, short-lived SSH keys, and secure application integration directly within AAP. It also supports Enterprise Vault features like namespaces and multi-tenant configurations.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_how_to_use_it"><a class="anchor" href="#_how_to_use_it"></a>How to use it?</h4>
-<div class="paragraph">
-<p>Use the provided Ansible playbooks to manage Vault policies and dynamic secrets. You can configure webhooks or polling mechanisms to trigger EDA rulebooks based on Vault events. If you are an existing user, utilize the migration documentation to transition smoothly from <strong>community.hashi_vault</strong> to <strong>hashicorp.vault</strong>.</p>
+<p>Users can now deploy, configure, and scale Vault clusters using provided playbooks. Event-Driven Ansible can trigger workflows based on Vault events. This collection natively enables dynamic credentials, short-lived SSH keys, and secure application integration directly within AAP, with support for Enterprise Vault features like namespaces and multi-tenant configurations.</p>
 </div>
 <div class="paragraph">
-<p><strong>Splunk (splunk.enterprise, splunk.es, splunk.itsi)</strong> Added modules to automate Universal Forwarder lifecycle installations, manage Incident Response workflows directly, and integrate ITSI seamlessly with EDA.</p>
+<p>Use the provided Ansible playbooks to manage Vault policies and dynamic secrets. Configure webhooks or polling mechanisms to trigger EDA rulebooks based on Vault events. Existing users can utilize the migration documentation to transition smoothly from <strong>community.hashi_vault</strong> to <strong>hashicorp.vault</strong>.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_why_does_it_matter_2"><a class="anchor" href="#_why_does_it_matter_2"></a>Why does it matter?</h4>
+<div class="sect2">
+<h3 id="_splunk_splunk_enterprise_splunk_es_splunk_itsi"><a class="anchor" href="#_splunk_splunk_enterprise_splunk_es_splunk_itsi"></a>Splunk (splunk.enterprise, splunk.es, splunk.itsi)</h3>
 <div class="paragraph">
-<p>It creates a bridge between your observability tools and action, allowing for closed-loop, self-healing IT automation by automatically triggering remediations when Splunk detects an issue.</p>
+<p>Added modules to automate Universal Forwarder lifecycle installations, manage Incident Response workflows directly, and integrate ITSI seamlessly with EDA. This creates a bridge between your observability tools and action, allowing for closed-loop, self-healing IT automation by automatically triggering remediations when Splunk detects an issue.</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="_how_to_use_it_2"><a class="anchor" href="#_how_to_use_it_2"></a>How to use it?</h4>
 <div class="paragraph">
 <p>Use modules like <strong>splunk_universal_forwarder_linux</strong> or <strong>win_splunk_universal_forwarder</strong> to bootstrap installations. For security events, use the <strong>splunk_response_plan_execution</strong> module to automatically apply response plans, and use <strong>itsi_aggregation_policy</strong> to route ITSI events directly to EDA.</p>
 </div>
-<div class="paragraph">
-<p><strong>Microsoft MECM &amp; SCOM</strong> New certified collections bridge Ansible with Microsoft Endpoint Configuration Manager (orchestrating zero-downtime Windows Server patching) and route SCOM alerts into Event-Driven Ansible.</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="_why_does_it_matter_3"><a class="anchor" href="#_why_does_it_matter_3"></a>Why does it matter?</h4>
+<div class="sect2">
+<h3 id="_microsoft_mecm_scom"><a class="anchor" href="#_microsoft_mecm_scom"></a>Microsoft MECM &amp; SCOM</h3>
 <div class="paragraph">
-<p>This brings comprehensive "Day-2" Microsoft infrastructure management into AAP, allowing you to orchestrate complex tasks like zero-downtime patching and automatically remediating Windows Server alerts without custom scripting.
-- <strong>How to use it?</strong> Use the <strong>software_update_deployment</strong> and <strong>install_updates</strong> modules to orchestrate your patch cycles. For SCOM, design event-driven hooks via webhooks or event streams to route incoming SCOM alerts into Event-Driven Ansible.</p>
+<p>New certified collections bridge Ansible with Microsoft Endpoint Configuration Manager (orchestrating zero-downtime Windows Server patching) and route SCOM alerts into Event-Driven Ansible. This brings comprehensive "Day-2" Microsoft infrastructure management into AAP, allowing you to orchestrate complex tasks like zero-downtime patching and automatically remediating Windows Server alerts without custom scripting.</p>
 </div>
 <div class="paragraph">
-<p><strong>Windows Operations (infra.windows_ops)</strong> Introduces pre-built roles to automatically apply and enforce DISA STIG and CIS Benchmark compliance rules for Windows Server 2019-2025 out-of-the-box.</p>
+<p>Use the <strong>software_update_deployment</strong> and <strong>install_updates</strong> modules to orchestrate your patch cycles. For SCOM, design event-driven hooks via webhooks or event streams to route incoming SCOM alerts into Event-Driven Ansible.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_why_does_it_matter_4"><a class="anchor" href="#_why_does_it_matter_4"></a>Why does it matter?</h4>
+<div class="sect2">
+<h3 id="_windows_operations_infra_windows_ops"><a class="anchor" href="#_windows_operations_infra_windows_ops"></a>Windows Operations (infra.windows_ops)</h3>
 <div class="paragraph">
-<p>It provides out-of-the-box federal security compliance and ensures your servers meet strict industry-standard hardening guidelines continuously, eliminating manual intervention for drift remediation.</p>
+<p>Introduces pre-built roles to automatically apply and enforce DISA STIG and CIS Benchmark compliance rules for Windows Server 2019-2025 out-of-the-box. This provides out-of-the-box federal security compliance and ensures your servers meet strict industry-standard hardening guidelines continuously, eliminating manual intervention for drift remediation.</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="_how_to_use_it_3"><a class="anchor" href="#_how_to_use_it_3"></a>How to use it?</h4>
 <div class="paragraph">
 <p>Apply the pre-built roles to your Windows environments and pair them with standard Ansible Automation Platform schedules or Event-Driven Ansible to automatically correct configuration drift, keeping Windows environments continuously aligned with organizational and federal security mandates without manual intervention.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_cloud_infrastructure_collections"><a class="anchor" href="#_cloud_infrastructure_collections"></a>Cloud Infrastructure Collections*</h3>
-<div class="paragraph">
-<p>Enhanced support for:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>google.cloud:</strong> Cloud Build 2nd gen, Parameter Manager, compute, Secret Manager, Storage</p>
-</li>
-<li>
-<p><strong>azure.azcollection:</strong> Azure services: ML, App Configuration, Front Door, Storage, Arc/HCI</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_networking_collections"><a class="anchor" href="#_networking_collections"></a>Networking Collections</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>cisco.intersight:</strong> 100+ modules for Day-2 ops, firmware, and port configuration</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Security + Compliance</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>hashicorp.vault:</strong> Secrets management, PKI, dynamic credentials, EDA integration</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_observability_incident_response"><a class="anchor" href="#_observability_incident_response"></a>Observability + Incident Response</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>splunk.enterprise:</strong> Universal Forwarder lifecycle automation</p>
-</li>
-<li>
-<p><strong>splunk.es:</strong> Enterprise Security incident workflows, response plan automation</p>
-</li>
-<li>
-<p><strong>splunk.itsi:</strong> IT Service Intelligence with EDA integration for closed-loop remediation</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_windows_patching_management"><a class="anchor" href="#_windows_patching_management"></a>Windows Patching &amp; Management</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>microsoft.mecm:</strong> Endpoint Configuration Manager: patch orchestration, client actions, and health checks</p>
-</li>
-<li>
-<p><strong>microsoft.scom:</strong> System Center Operations Manager infrastructure + EDA alert routing</p>
-</li>
-<li>
-<p><strong>infra.mecm_ops:</strong> Higher-level validated roles on top of MECM: emergency patching, health reports</p>
-</li>
-<li>
-<p><strong>infra.windows_ops:</strong> Windows security baseline enforcement (DISA STIG, CIS benchmarks, drift remediation)</p>
-</li>
-</ul>
 </div>
 </div>
 </div>
