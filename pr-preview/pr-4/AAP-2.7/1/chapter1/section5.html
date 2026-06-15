@@ -72,10 +72,7 @@
     <a class="nav-link" href="section6.html">Automation Coding Assistance and Core Performance Improvements</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="section7.html">Event-Driven Ansible Enhancements</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="section8.html">Conclusion</a>
+    <a class="nav-link" href="section7.html">Conclusion</a>
   </li>
 </ul>
   </li>
@@ -152,67 +149,62 @@
 <div class="paragraph">
 <p><strong>HashiCorp Vault (hashicorp.vault)</strong> Users can now deploy, configure, and scale Vault clusters using provided playbooks. Event-Driven Ansible can trigger workflows based on Vault events.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Why does it matter?</strong></p>
-</li>
-</ul>
-</div>
+<div class="sect3">
+<h4 id="_why_does_it_matter"><a class="anchor" href="#_why_does_it_matter"></a>Why does it matter?</h4>
 <div class="paragraph">
 <p>It natively enables dynamic credentials, short-lived SSH keys, and secure application integration directly within AAP. It also supports Enterprise Vault features like namespaces and multi-tenant configurations.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>How to use it?</strong></p>
-</li>
-</ul>
 </div>
+<div class="sect3">
+<h4 id="_how_to_use_it"><a class="anchor" href="#_how_to_use_it"></a>How to use it?</h4>
 <div class="paragraph">
 <p>Use the provided Ansible playbooks to manage Vault policies and dynamic secrets. You can configure webhooks or polling mechanisms to trigger EDA rulebooks based on Vault events. If you are an existing user, utilize the migration documentation to transition smoothly from <strong>community.hashi_vault</strong> to <strong>hashicorp.vault</strong>.</p>
 </div>
 <div class="paragraph">
 <p><strong>Splunk (splunk.enterprise, splunk.es, splunk.itsi)</strong> Added modules to automate Universal Forwarder lifecycle installations, manage Incident Response workflows directly, and integrate ITSI seamlessly with EDA.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Why does it matter?</strong> It creates a bridge between your observability tools and action, allowing for closed-loop, self-healing IT automation by automatically triggering remediations when Splunk detects an issue.</p>
-</li>
-<li>
-<p><strong>How to use it?</strong> Use modules like <strong>splunk_universal_forwarder_linux</strong> or <strong>win_splunk_universal_forwarder</strong> to bootstrap installations. For security events, use the <strong>splunk_response_plan_execution</strong> module to automatically apply response plans, and use <strong>itsi_aggregation_policy</strong> to route ITSI events directly to EDA.</p>
-</li>
-</ul>
+</div>
+<div class="sect3">
+<h4 id="_why_does_it_matter_2"><a class="anchor" href="#_why_does_it_matter_2"></a>Why does it matter?</h4>
+<div class="paragraph">
+<p>It creates a bridge between your observability tools and action, allowing for closed-loop, self-healing IT automation by automatically triggering remediations when Splunk detects an issue.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_how_to_use_it_2"><a class="anchor" href="#_how_to_use_it_2"></a>How to use it?</h4>
+<div class="paragraph">
+<p>Use modules like <strong>splunk_universal_forwarder_linux</strong> or <strong>win_splunk_universal_forwarder</strong> to bootstrap installations. For security events, use the <strong>splunk_response_plan_execution</strong> module to automatically apply response plans, and use <strong>itsi_aggregation_policy</strong> to route ITSI events directly to EDA.</p>
 </div>
 <div class="paragraph">
 <p><strong>Microsoft MECM &amp; SCOM</strong> New certified collections bridge Ansible with Microsoft Endpoint Configuration Manager (orchestrating zero-downtime Windows Server patching) and route SCOM alerts into Event-Driven Ansible.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Why does it matter?</strong> This brings comprehensive "Day-2" Microsoft infrastructure management into AAP, allowing you to orchestrate complex tasks like zero-downtime patching and automatically remediating Windows Server alerts without custom scripting.</p>
-</li>
-<li>
-<p><strong>How to use it?</strong> Use the <strong>software_update_deployment</strong> and <strong>install_updates</strong> modules to orchestrate your patch cycles. For SCOM, design event-driven hooks via webhooks or event streams to route incoming SCOM alerts into Event-Driven Ansible.</p>
-</li>
-</ul>
+</div>
+<div class="sect3">
+<h4 id="_why_does_it_matter_3"><a class="anchor" href="#_why_does_it_matter_3"></a>Why does it matter?</h4>
+<div class="paragraph">
+<p>This brings comprehensive "Day-2" Microsoft infrastructure management into AAP, allowing you to orchestrate complex tasks like zero-downtime patching and automatically remediating Windows Server alerts without custom scripting.
+- <strong>How to use it?</strong> Use the <strong>software_update_deployment</strong> and <strong>install_updates</strong> modules to orchestrate your patch cycles. For SCOM, design event-driven hooks via webhooks or event streams to route incoming SCOM alerts into Event-Driven Ansible.</p>
 </div>
 <div class="paragraph">
 <p><strong>Windows Operations (infra.windows_ops)</strong> Introduces pre-built roles to automatically apply and enforce DISA STIG and CIS Benchmark compliance rules for Windows Server 2019-2025 out-of-the-box.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Why does it matter?</strong> It provides out-of-the-box federal security compliance and ensures your servers meet strict industry-standard hardening guidelines continuously, eliminating manual intervention for drift remediation.</p>
-</li>
-<li>
-<p><strong>How to use it?</strong> Apply the pre-built roles to your Windows environments and pair them with standard Ansible Automation Platform schedules or Event-Driven Ansible to automatically correct configuration drift, keeping Windows environments continuously aligned with organizational and federal security mandates without manual intervention.</p>
-</li>
-</ul>
 </div>
+<div class="sect3">
+<h4 id="_why_does_it_matter_4"><a class="anchor" href="#_why_does_it_matter_4"></a>Why does it matter?</h4>
 <div class="paragraph">
-<p><strong>Cloud Infrastructure Collections</strong> Enhanced support for:</p>
+<p>It provides out-of-the-box federal security compliance and ensures your servers meet strict industry-standard hardening guidelines continuously, eliminating manual intervention for drift remediation.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_how_to_use_it_3"><a class="anchor" href="#_how_to_use_it_3"></a>How to use it?</h4>
+<div class="paragraph">
+<p>Apply the pre-built roles to your Windows environments and pair them with standard Ansible Automation Platform schedules or Event-Driven Ansible to automatically correct configuration drift, keeping Windows environments continuously aligned with organizational and federal security mandates without manual intervention.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cloud_infrastructure_collections"><a class="anchor" href="#_cloud_infrastructure_collections"></a>Cloud Infrastructure Collections*</h3>
+<div class="paragraph">
+<p>Enhanced support for:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -224,9 +216,9 @@
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p><strong>Networking Collections</strong></p>
 </div>
+<div class="sect2">
+<h3 id="_networking_collections"><a class="anchor" href="#_networking_collections"></a>Networking Collections</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -244,9 +236,9 @@
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p><strong>Observability + Incident Response</strong></p>
 </div>
+<div class="sect2">
+<h3 id="_observability_incident_response"><a class="anchor" href="#_observability_incident_response"></a>Observability + Incident Response</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -260,9 +252,9 @@
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p><strong>Windows Patching &amp; Management</strong></p>
 </div>
+<div class="sect2">
+<h3 id="_windows_patching_management"><a class="anchor" href="#_windows_patching_management"></a>Windows Patching &amp; Management</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -278,6 +270,7 @@
 <p><strong>infra.windows_ops:</strong> Windows security baseline enforcement (DISA STIG, CIS benchmarks, drift remediation)</p>
 </li>
 </ul>
+</div>
 </div>
 </div>
 </div>
