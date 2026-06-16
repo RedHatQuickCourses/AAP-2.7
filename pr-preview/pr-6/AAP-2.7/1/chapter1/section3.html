@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Security, Governance, and Identity :: Key New Features of Ansible Automation Platform 2.7</title>
+    <link rel="prev" href="section2.html">
+    <link rel="next" href="section4.html">
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/collapsible.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/reading-time.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.redhat.com" target="_blank"><img src="../../../_/img/redhat-logo.png" height="40px" alt="Red Hat"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">Key New Features of Ansible Automation Platform 2.7</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/RedHatQuickCourses/AAP-2.7/issues" target="_blank">Report Issues</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="AAP-2.7" data-version="1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Key New Features of Ansible Automation Platform 2.7</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Key New Features of Ansible Automation Platform 2.7</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section1.html">Installation, Upgrades, &amp; Platform Resilience</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section2.html">The AI Revolution (AIOps, RAG, and MCP)</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="section3.html">Security, Governance, and Identity</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section4.html">Developer and User Experience</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section5.html">Certified Content Collection Expansions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section6.html">Automation Coding Assistance and Core Performance Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section7.html">Conclusion</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Key New Features of Ansible Automation Platform 2.7</span>
+    <span class="version">1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Key New Features of Ansible Automation Platform 2.7</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Key New Features of Ansible Automation Platform 2.7</a></li>
+    <li><a href="section3.html">Security, Governance, and Identity</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Security, Governance, and Identity</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ansible Automation Platform (AAP) 2.7 fundamentally rebuilds the platform’s security architecture by enforcing a strict zero-trust posture and eliminating legacy, high-risk access vectors. By transitioning entirely away from direct component-level API access and unencrypted basic authentication, AAP 2.7 mandates a unified gateway model.
+The platform now introduces native OpenID Connect (OIDC) provider capabilities alongside workload identity frameworks, transforming how users, external applications, and automated playbooks authenticate securely across the enterprise.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Image%204.png" alt="Image 4">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_why_does_it_matter"><a class="anchor" href="#_why_does_it_matter"></a>Why Does It Matter?</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Elimination of Static Credential Sprawl:</strong> Traditional automation often relies on hardcoded passwords or long-lived service account tokens that can easily leak. By utilizing dynamic <strong>OIDC Workload Identities [Tech Preview]</strong>, playbooks generate short-lived, cryptographic identities on the fly—greatly reducing the corporate attack surface.</p>
+</li>
+<li>
+<p><strong>Reduction of the Attack Surface:</strong> Disabling direct, unauthenticated API access to individual components (like the Controller, Hub, or EDA engines) closes legacy backdoors. Attackers can no longer attempt to bypass security layers by hitting standalone component ports directly.</p>
+</li>
+<li>
+<p><strong>Enforced Centralized Auditing:</strong> Forcing all external tools, basic authentication, and personal access tokens through a unified authentication layer means your security team gets a single, untampered audit log of every action taken within the automation fabric.</p>
+</li>
+<li>
+<p><strong>Seamless Secrets Management Integration:</strong> By acting as an OIDC provider, AAP 2.7 allows external systems—specifically HashiCorp Vault—to cryptographically verify that an automated job is exactly who it claims to be before releasing sensitive infrastructure secrets.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Instructor Tip:</strong> Before running the AAP 2.7 upgrade, execute the new CLI utility aap-detect-direct-component-access. This will automatically scan and pinpoint any legacy, direct-API scripts hidden in your environment so you can fix them before they are blocked.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_aap_as_an_oidc_identity_provider_for_hashicorp_vault"><a class="anchor" href="#_aap_as_an_oidc_identity_provider_for_hashicorp_vault"></a>AAP as an OIDC Identity Provider for HashiCorp Vault</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>AAP 2.7 introduces the ability to use AAP as an <strong>OIDC identity provider for Vault authentication</strong> for secrets access [Tech Preview]. This integration provides:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Simplified and centralized secrets management</strong> for automation infrastructure</p>
+</li>
+<li>
+<p><strong>Time-bound credentials</strong> for automation—strengthening security with short-lived, dynamically-generated credentials</p>
+</li>
+<li>
+<p><strong>Limit and secure secrets access</strong> by leveraging OIDC authentication process with Vault</p>
+</li>
+<li>
+<p>Use AAP as an identity provider for Vault authentication for secrets access</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_workflow_to_verify_access_and_mitigate_leaked_tokens"><a class="anchor" href="#_workflow_to_verify_access_and_mitigate_leaked_tokens"></a>Workflow to Verify Access and Mitigate Leaked Tokens</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The JWT (JSON Web Token) authentication workflow enables:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requires elevated secret to run automation against Vault-secured infrastructure</p>
+</li>
+<li>
+<p>AAP JWT token authenticates via OIDC</p>
+</li>
+<li>
+<p>Vault returns a short-lived token for secret retrieval</p>
+</li>
+<li>
+<p>AAP retrieves the elevated secret</p>
+</li>
+<li>
+<p>Run automation with the secret</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This ensures that secrets are only accessible during the automation job execution, significantly reducing the risk of credential exposure.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_additional_resources"><a class="anchor" href="#_additional_resources"></a>Additional Resources</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Blog:</strong> <a href="https://www.redhat.com/en/blog/strengthening-security-and-consistency-cloud-red-hat-and-hashicorp">Strengthening security and consistency in the cloud with Red Hat and HashiCorp</a></p>
+</li>
+<li>
+<p><strong>Customer-facing slides:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.google.com/presentation/d/1234567890/">ABU | Ansible + Vault 101</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/presentation/d/1234567890/">ABU | Ansible + Vault 201</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Documentation:</strong> Available in official AAP 2.7 documentation</p>
+</li>
+<li>
+<p><strong>Webinar (June 16 @ 10 am EDT):</strong> <a href="https://www.redhat.com/en/events/webinar/applying-zero-trust-principles-automation-hashicorp-vault">Applying zero trust principles to automation with HashiCorp Vault</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="section2.html">The AI Revolution (AIOps, RAG, and MCP)</a></span>
+  <span class="next"><a href="section4.html">Developer and User Experience</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <img src="../../../_/img/rhl-logo-red.png" height="40px" alt="Red Hat"  href="https://redhat.com" >
+</footer><script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script defer src="../../../_/js/vendor/tabs.js"></script>
+<script defer src="../../../_/js/vendor/reading-time.js"></script>
+  </body>
+</html>
