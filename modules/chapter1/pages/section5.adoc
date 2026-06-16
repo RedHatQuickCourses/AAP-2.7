@@ -11,6 +11,8 @@ AAP 2.7 introduces new certified content collections for:
 - *Microsoft and cloud:* Microsoft System Center Operations Manager (SCOM) (Azure and Windows), Amazon.ai support for DevOps Guru to EDA
 - *Ansible Automation Platform:* AAP configuration-as-code, RBAC/settings refactoring, performance improvements
 
+image::cc.png[]
+
 === HashiCorp Vault (hashicorp.vault)
 
 Users can now deploy, configure, and scale Vault clusters using provided playbooks. Event-Driven Ansible can trigger workflows based on Vault events. This collection natively enables dynamic credentials, short-lived SSH keys, and secure application integration directly within AAP, with support for Enterprise Vault features like namespaces and multi-tenant configurations.

@@ -2,11 +2,11 @@
 
 Before we can use the new features, we must understand how to deploy and upgrade to AAP 2.7, alongside its resilience improvements.
 
-Installation and Upgrades AAP 2.7 completely *removes* the *RPM installation method*, shifting strictly to containerized and operator-supported installation methods, though Ansible Development Tools will still be accessible via RPM. 
+Installation and Upgrades: Starting with AAP 2.7, the *RPM installation method* is *no longer available*, shifting strictly to containerized and operator-supported installation methods, though Ansible Development Tools will still be accessible via RPM. 
 
 
 == Why AAP 2.7 is Exclusively Containerized:
-- *Farewell to RPMs*: AAP 2.7 officially removes the legacy RPM installer, eliminating host-OS dependency bottlenecks and package conflicts.
+- *Farewell to RPMs*: Starting with AAP 2.7, the legacy RPM installer is no longer available, eliminating host-OS dependency bottlenecks and package conflicts.
 - *Absolute Isolation*: Containers decouple the automation control plane from the underlying OS, making upgrades and rollbacks entirely predictable.
 - *Enterprise Hardening*: Standardizing on Podman and Red Hat OpenShift ensures zero-downtime scalability and rootless container security.
 - *Environment Consistency*: Guarantees a reliable, maintainable, and portable automation fabric across hybrid cloud environments.
@@ -19,7 +19,7 @@ You must first ensure you are on AAP 2.6, as direct upgrades from 2.4 or 2.5 are
 - *Red Hat Partners:*  https://training-lms.redhat.com/sso/saml/auth/rhopen?RelayState=deeplinkoffering%3D86053966/[]
 - *Red Hat Associates:* https://training-lms.redhat.com/sso/saml/auth/rhlpint?RelayState=deeplinkoffering%3D86053961/[]
 
-NOTE: Customers on older versions of AAP need to upgrade to 2.6, then upgrade to 2.7. A migration to a new OS or topology may be required. RPM-based installations are not available with AAP 2.7+
+NOTE: Customers on older versions of AAP need to upgrade to 2.6, then upgrade to 2.7. A migration to a new OS or topology may be required. RPM-based installations are not available starting with AAP 2.7 and later versions (AAP 2.7+)
 
 == Self-Service Automation Portal on RHEL 9/10
 
