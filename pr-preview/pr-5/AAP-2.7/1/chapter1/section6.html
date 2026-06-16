@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Automation Coding Assistance and Core Performance Improvements :: Key New Features of Ansible Automation Platform 2.7</title>
+    <link rel="prev" href="section5.html">
+    <link rel="next" href="section7.html">
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/collapsible.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/reading-time.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.redhat.com" target="_blank"><img src="../../../_/img/redhat-logo.png" height="40px" alt="Red Hat"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">Key New Features of Ansible Automation Platform 2.7</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/RedHatQuickCourses/AAP-2.7/issues" target="_blank">Report Issues</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="AAP-2.7" data-version="1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Key New Features of Ansible Automation Platform 2.7</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Key New Features of Ansible Automation Platform 2.7</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section1.html">Installation, Upgrades, &amp; Platform Resilience</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section2.html">The AI Revolution (AIOps, RAG, and MCP)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section3.html">Security, Governance, and Identity</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section4.html">Developer and User Experience</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section5.html">Certified Content Collection Expansions</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="section6.html">Automation Coding Assistance and Core Performance Improvements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="section7.html">Conclusion</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Key New Features of Ansible Automation Platform 2.7</span>
+    <span class="version">1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Key New Features of Ansible Automation Platform 2.7</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Key New Features of Ansible Automation Platform 2.7</a></li>
+    <li><a href="section6.html">Automation Coding Assistance and Core Performance Improvements</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Automation Coding Assistance and Core Performance Improvements</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this module, we will explore how AAP 2.7 improves the code-writing experience for developers and the underlying architectural performance of the platform itself.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Image%203.png" alt="Image 3">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Section 1: Automation Coding Assistant</strong>
+To help engineers write automation code more efficiently, AAP 2.7 introduces core updates to the Automation Coding Assistant.
+- <strong>RHEL AI Integration:</strong> The coding assistant has added direct support for RHEL AI hosted models.
+- <strong>Removed Dependencies:</strong> With this new support, you are no longer strictly required to use WatsonX to power the coding assistant, giving you more flexibility in your AI model choices.</p>
+</div>
+<div class="paragraph">
+<p><strong>Why does it matter?</strong> This change prevents vendor lock-in and gives your development teams the independence to choose their preferred AI foundation models. It aligns with the broader goal of using AI to plan and recommend, while AAP securely executes the actions.</p>
+</div>
+<div class="paragraph">
+<p><strong>How to use it?</strong> Within your developer environment, configure the VS Code Ansible plugin to connect directly to the newly supported RHEL AI models to start receiving intelligent code suggestions.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Foundation Models:</strong> Includes Claude, Gemini, Copilot, and ChatGPT.</p>
+</li>
+<li>
+<p><strong>Red Hat AI:</strong> Powers the <strong>Intelligent assistant</strong> and <strong>Code assistant</strong>.</p>
+</li>
+<li>
+<p><strong>Automated Inference:</strong> Connected through the MCP server to Observability Platforms.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Section 2: ansible.platform Performance Improvements</strong>
+Under the hood, AAP 2.7 is making significant changes to how the platform processes settings and access controls to improve overall execution performance.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Refactoring for Speed:</strong> Within the <strong>ansible.platform</strong> collection, existing Role-Based Access Control (RBAC) and global settings have been heavily refactored, transitioning them from standard modules to action plugins.</p>
+</li>
+<li>
+<p><strong>Why does it matter?</strong> These performance improvements are not just about speed today. Most importantly, this refactoring represents the critical foundational work required to start transitioning more "Configuration as Code" capabilities directly into <strong>ansible.platform</strong> in future releases.</p>
+</li>
+<li>
+<p><strong>How to use it?</strong> No specific manual changes are required from your developers or engineers. Once you upgrade your environment to AAP 2.7, the platform will automatically utilize these highly efficient action plugins for RBAC and settings processing.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_additional_platform_enhancements"><a class="anchor" href="#_additional_platform_enhancements"></a>Additional Platform Enhancements</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_platform_foundation"><a class="anchor" href="#_platform_foundation"></a>Platform Foundation</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>All API traffic through gateway:</strong> Single ingress, simplified architecture</p>
+</li>
+<li>
+<p><strong>Common tasking system:</strong> Dispatcherd unifies platform services</p>
+</li>
+<li>
+<p><strong>PostgreSQL 16 &amp; 17 support:</strong> Database modernization</p>
+</li>
+<li>
+<p><strong>Django 5.2 LTS:</strong> Framework upgrade for long-term support</p>
+</li>
+<li>
+<p><strong>Centralized OpenAPI spec:</strong> Enforced API consistency across services</p>
+</li>
+<li>
+<p><strong>ansible.platform Phase 1:</strong> CaC foundations for unified collection</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ux_customer_rfes"><a class="anchor" href="#_ux_customer_rfes"></a>UX &amp; Customer RFEs</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Bulk host delete:</strong> Long-requested operational efficiency</p>
+</li>
+<li>
+<p><strong>Auth mapping label clarity:</strong> Reduced confusion in authentication setup</p>
+</li>
+<li>
+<p><strong>Repository sync date in UI:</strong> Visibility into last sync status</p>
+</li>
+<li>
+<p><strong>Feature flags runtime UI:</strong> Platform operator control</p>
+</li>
+<li>
+<p><strong>Workflow convergence improvements:</strong> Better multi-path workflow handling</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="section5.html">Certified Content Collection Expansions</a></span>
+  <span class="next"><a href="section7.html">Conclusion</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <img src="../../../_/img/rhl-logo-red.png" height="40px" alt="Red Hat"  href="https://redhat.com" >
+</footer><script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script defer src="../../../_/js/vendor/tabs.js"></script>
+<script defer src="../../../_/js/vendor/reading-time.js"></script>
+  </body>
+</html>
